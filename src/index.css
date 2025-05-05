@@ -1,1 +1,36 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}/* Orbit Animation */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+/* Star Animation for background */
+@keyframes starMovement {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-100vh) translateX(-100vw);
+  }
+}
+
+.planet {
+  animation: orbit 15s infinite linear;
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  animation: starMovement linear infinite;
+  opacity: 0.6;
+}
