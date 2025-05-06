@@ -9,7 +9,7 @@ import Contact from './components/Contact/Contact';
 function App() {
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1000, once: false });
   }, []);
 
 
