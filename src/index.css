@@ -1,36 +1,35 @@
 @import "tailwindcss";
+
 html {
   scroll-behavior: smooth;
-}/* Orbit Animation */
-@keyframes orbit {
+}
+
+/* skill section animation */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes rotateOrbit {
   0% {
-    transform: rotate(0deg) translateX(150px) rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
 
-/* Star Animation for background */
-@keyframes starMovement {
-  0% {
-    transform: translateY(0) translateX(0);
+@keyframes star {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.2;
   }
-  100% {
-    transform: translateY(-100vh) translateX(-100vw);
+  50% {
+    transform: translateY(-2px);
+    opacity: 0.8;
   }
 }
 
-.planet {
-  animation: orbit 15s infinite linear;
-}
-
-.star {
-  width: 2px;
-  height: 2px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  animation: starMovement linear infinite;
-  opacity: 0.6;
+.animate-star {
+  animation: star 5s ease-in-out infinite;
 }

@@ -3,9 +3,9 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Hero from './components/Hero/Hero'
 import Navbar from './components/Navbar/Navbar'
-import Galaxy from './components/Skills/Galaxy';
 import './index.css'
-import '../src/App.css'
+import SkillGalaxy from './components/Skills/SkillGalaxy';
+import Contact from './components/Contact/Contact';
 function App() {
 
   useEffect(() => {
@@ -18,9 +18,9 @@ function App() {
     <Navbar />
 
     <section id="home" className="h-screen text-white p-10"><Hero></Hero></section>
-    <section id="skills" className="h-screen text-white p-10"><Galaxy></Galaxy></section>
+    <section id="skills" className="h-screen text-white p-10"><SkillGalaxy></SkillGalaxy></section>
     {/* <section id="projects" className="h-screen text-white p-10">Projects Section</section> */}
-    {/* <section id="contact" className="h-screen text-white p-10">Contact Section</section> */}
+    <section id="contact" className="h-screen text-white p-10"><Contact></Contact></section>
   </div>
 
   )
