@@ -31,7 +31,7 @@ export default function Hero() {
           </p>
 
           {/* Futuristic Button */}
-          <a
+          {/* <a
             href="/2.pdf"
             download="Mehedi-Hasan_shohan-cv.pdf" target='_blank'
             className="inline-block relative px-8 py-3 text-cyan-300 font-bold tracking-wide border border-cyan-300 rounded-lg overflow-hidden group"
@@ -40,6 +40,73 @@ export default function Hero() {
             <span className="relative z-10">Download CV</span>
             <span className="absolute top-0 left-0 w-full h-full border-2 border-cyan-400 rounded-lg animate-spin-slow group-hover:animate-none"></span>
           </a>
+          <a
+            href="/2.pdf"
+            download="Mehedi-Hasan_shohan-cv.pdf" target='_blank'
+            className="inline-block relative px-8 py-3 text-cyan-300 font-bold tracking-wide border border-cyan-300 rounded-lg overflow-hidden group"
+          >
+            <span className="absolute inset-0 bg-cyan-500/20 blur-sm opacity-70 group-hover:opacity-100 transition-all duration-300 animate-pulse"></span>
+            <span className="relative z-10">Download CV</span>
+            <span className="absolute top-0 left-0 w-full h-full border-2 border-cyan-400 rounded-lg animate-spin-slow group-hover:animate-none"></span>
+          </a> */}
+          {/*  custom*/}
+          <a
+  href="/2.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg border border-cyan-400 text-cyan-300 font-bold shadow-[0_0_20px_rgba(34,211,238,0.6)] overflow-hidden transition-all duration-300 hover:text-white group"
+>
+  {/* Smooth fill glow on hover */}
+  <span className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+
+  {/* Correct download icon */}
+  <svg
+    className="relative z-10 w-5 h-5 text-cyan-300 group-hover:text-white transition duration-300"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 4v12"
+    />
+  </svg>
+
+  {/* Button text */}
+  <span className="relative z-10">View CV</span>
+</a>
+
+
+            <a
+              href="/2.pdf"
+              download="Mehedi-Hasan_Shohan-CV.pdf"
+              target="_blank"
+              className="relative inline-flex ml-8 items-center gap-2 px-8 py-3 rounded-lg border border-cyan-400 text-cyan-300 font-bold shadow-[0_0_20px_rgba(34,211,238,0.6)] overflow-hidden transition-all duration-300 hover:text-white group"
+            >
+              {/* Glowing background on hover */}
+              <span className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+
+              {/* Icon */}
+              <svg
+                className="relative z-10 w-5 h-5 text-cyan-300 group-hover:text-white transition duration-300"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 4v12" />
+              </svg>
+
+              {/* Text */}
+              <span className="relative z-10">Download CV</span>
+            </a>
+            {/* custom btn ends here */}
+
+
+
         </div>
 
         {/* Right Section - Neon Image Card */}

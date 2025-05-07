@@ -280,9 +280,15 @@ export default function Contact() {
           <a href="https://www.facebook.com/profile.php?id=100007820023284" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
             <Facebook />
           </a>
-          <a href="mailto:mhshohan01@gmail.com" className="hover:text-cyan-400">
-            <Mail />
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mhshohan01@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400">
+           <Mail />
           </a>
+
           <a href="https://www.linkedin.com/in/mehedi-hasan-1a08b22b7/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
             <Linkedin />
           </a>
