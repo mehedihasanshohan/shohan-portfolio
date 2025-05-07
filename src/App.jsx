@@ -6,8 +6,8 @@ import Navbar from './components/Navbar/Navbar'
 import './index.css'
 import SkillGalaxy from './components/Skills/SkillGalaxy';
 import Contact from './components/Contact/Contact';
-import GalaxySkills from './components/DualGalaxy/GalaxySkills';
 import { Toaster } from 'react-hot-toast';
+import Education from './components/Education/Education';
 
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
         <section id="skills" className=""><SkillGalaxy></SkillGalaxy></section>
         {/* <section id="projects" className="h-screen text-white p-10">Projects Section</section> */}
         <section id="contact" className=" "><Contact></Contact></section>
-        <GalaxySkills></GalaxySkills>
+        <section id="education" className=" "><Education></Education></section>
       {/* </div> */}
     </>
   )

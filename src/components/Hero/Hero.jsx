@@ -54,7 +54,7 @@ export default function Hero() {
   href="/2.pdf"
   target="_blank"
   rel="noopener noreferrer"
-  className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg border border-cyan-400 text-cyan-300 font-bold shadow-[0_0_20px_rgba(34,211,238,0.6)] overflow-hidden transition-all duration-300 hover:text-white group"
+  className="relative inline-flex items-center gap-2 px-8 mt-4 py-3 rounded-lg border border-cyan-400 text-cyan-300 font-bold shadow-[0_0_20px_rgba(34,211,238,0.6)] overflow-hidden transition-all duration-300 hover:text-white group"
 >
   {/* Smooth fill glow on hover */}
   <span className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
@@ -84,7 +84,7 @@ export default function Hero() {
               href="/2.pdf"
               download="Mehedi-Hasan_Shohan-CV.pdf"
               target="_blank"
-              className="relative inline-flex ml-8 items-center gap-2 px-8 py-3 rounded-lg border border-cyan-400 text-cyan-300 font-bold shadow-[0_0_20px_rgba(34,211,238,0.6)] overflow-hidden transition-all duration-300 hover:text-white group"
+              className="relative inline-flex ml-8 items-center gap-2 px-8 py-3 mt-4 rounded-lg border border-cyan-400 text-cyan-300 font-bold shadow-[0_0_20px_rgba(34,211,238,0.6)] overflow-hidden transition-all duration-300 hover:text-white group"
             >
               {/* Glowing background on hover */}
               <span className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
