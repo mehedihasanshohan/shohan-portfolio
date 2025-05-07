@@ -186,7 +186,7 @@ export default function Contact() {
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
-    alert("📋 Phone number copied!");
+    // alert("📋 Phone number copied!");
     toast.success("📋 Phone number copied!");
   };
 
@@ -239,7 +239,7 @@ export default function Contact() {
 
       {/* Left Side */}
       <div
-        className="md:w-1/2 space-y-6"
+        className="md:w-1/2 space-y-6 rounded-xl p-6 border border-cyan-400"
         data-aos="fade-right"
         data-aos-duration="1000"
       >

@@ -18,16 +18,16 @@ function App() {
 
   return (
     <>
-    <Toaster position='top-right'></Toaster>
-    <div className="min-h-screen bg-gradient-to-br from-[#1e293b] to-[#0f172a]">
-    <Navbar />
-
-    <section id="home" className="h-screen text-white p-10"><Hero></Hero></section>
-    <section id="skills" className="h-screen text-white p-10"><SkillGalaxy></SkillGalaxy></section>
-    {/* <section id="projects" className="h-screen text-white p-10">Projects Section</section> */}
-    <section id="contact" className="h-screen text-white p-10"><Contact></Contact></section>
-    <GalaxySkills></GalaxySkills>
-  </div>
+      <Toaster position='top-right'></Toaster>
+      {/* <div className="min-h-screen bg-gradient-to-br from-[#1e293b] to-[#0f172a]"> */}
+         {/* <Navbar /> */}
+        <section id='home' className=''><Navbar></Navbar></section>
+        <section id="home" className=""><Hero></Hero></section>
+        <section id="skills" className=""><SkillGalaxy></SkillGalaxy></section>
+        {/* <section id="projects" className="h-screen text-white p-10">Projects Section</section> */}
+        <section id="contact" className=" "><Contact></Contact></section>
+        <GalaxySkills></GalaxySkills>
+      {/* </div> */}
     </>
   )
 }
