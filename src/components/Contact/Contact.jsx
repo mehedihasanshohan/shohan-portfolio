@@ -167,8 +167,8 @@
 
 
 
-
-
+import toast from "react-hot-toast";
+import { Copy } from "lucide-react";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import {
@@ -183,6 +183,13 @@ import {
 } from "lucide-react";
 
 export default function Contact() {
+
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
+    alert("📋 Phone number copied!");
+    toast.success("📋 Phone number copied!");
+  };
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -244,7 +251,16 @@ export default function Contact() {
           </p>
           <p className="flex items-center gap-2">
             <Phone className="text-cyan-300" size={18} />
-            <span className="text-cyan-300">01985545365</span>
+            <span className="text-cyan-300">
+              <a href="tel:01985545365">01985545365</a>
+            </span>
+            <button
+                 onClick={() => copyToClipboard("01985545365")}
+                className="text-cyan-300 hover:text-cyan-400"
+                title="Copy phone number"
+             >
+              <Copy size={16} />
+           </button>
           </p>
         </div>
 
@@ -261,13 +277,13 @@ export default function Contact() {
         <div className="border p-2 border-cyan-300 rounded-xl">
         <div className="text-cyan-300 font-bold text-2xl">Follow Me</div>
         <div className="flex gap-4 mt-4 text-xl">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
+          <a href="https://www.facebook.com/profile.php?id=100007820023284" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
             <Facebook />
           </a>
           <a href="mailto:mhshohan01@gmail.com" className="hover:text-cyan-400">
             <Mail />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
+          <a href="https://www.linkedin.com/in/mehedi-hasan-1a08b22b7/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
             <Linkedin />
           </a>
         </div>

@@ -6,6 +6,9 @@ import Navbar from './components/Navbar/Navbar'
 import './index.css'
 import SkillGalaxy from './components/Skills/SkillGalaxy';
 import Contact from './components/Contact/Contact';
+import GalaxySkills from './components/DualGalaxy/GalaxySkills';
+import { Toaster } from 'react-hot-toast';
+
 function App() {
 
   useEffect(() => {
@@ -14,6 +17,8 @@ function App() {
 
 
   return (
+    <>
+    <Toaster position='top-right'></Toaster>
     <div className="min-h-screen bg-gradient-to-br from-[#1e293b] to-[#0f172a]">
     <Navbar />
 
@@ -21,8 +26,9 @@ function App() {
     <section id="skills" className="h-screen text-white p-10"><SkillGalaxy></SkillGalaxy></section>
     {/* <section id="projects" className="h-screen text-white p-10">Projects Section</section> */}
     <section id="contact" className="h-screen text-white p-10"><Contact></Contact></section>
+    <GalaxySkills></GalaxySkills>
   </div>
-
+    </>
   )
 }
 

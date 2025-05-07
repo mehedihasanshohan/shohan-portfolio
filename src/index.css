@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
 
 /* skill section animation */
 
@@ -33,3 +30,61 @@ html {
 .animate-star {
   animation: star 5s ease-in-out infinite;
 }
+
+
+
+/* index.css */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes starfield {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 2000px 2000px;
+  }
+}
+
+.starry-bg {
+  background-image: radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
+  animation: starfield 120s linear infinite;
+  opacity: 0.05;
+}
+
+
+
+
+
+
+
+/* //dual galaxy */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0px);
+  }
+}
+
+@keyframes starsMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 10000px;
+  }
+}
+
