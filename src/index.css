@@ -8,95 +8,55 @@ body {
   overflow-x: hidden;
 }
 
-/* body { */
-    /* font-family: 'Roboto', sans-serif; */
-  /* } */
 
-
-/* skill section animation */
-
-html {
-  scroll-behavior: smooth;
-}
-
-@keyframes rotateOrbit {
+@keyframes swim1 {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(200px, 200px);
   }
 }
 
-@keyframes star {
-  0%, 100% {
-    transform: translateY(0px);
-    opacity: 0.2;
-  }
-  50% {
-    transform: translateY(-2px);
-    opacity: 0.8;
-  }
-}
-
-.animate-star {
-  animation: star 5s ease-in-out infinite;
-}
-
-
-
-/* index.css */
-
-@keyframes spin {
+@keyframes swim2 {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(-250px, 150px);
   }
 }
 
-@keyframes starfield {
+@keyframes swim3 {
   0% {
-    background-position: 0 0;
+    transform: translate(0, 0);
   }
   100% {
-    background-position: 2000px 2000px;
+    transform: translate(300px, -250px);
   }
 }
 
-.starry-bg {
-  background-image: radial-gradient(white 1px, transparent 1px),
-    radial-gradient(white 1px, transparent 1px);
-  background-size: 100px 100px;
-  background-position: 0 0, 50px 50px;
-  animation: starfield 120s linear infinite;
-  opacity: 0.05;
-}
-
-
-
-
-
-
-
-/* //dual galaxy */
-
-@keyframes spin {
+@keyframes swim4 {
   0% {
-    transform: rotate(0deg) translateX(0px);
+    transform: translate(0, 0);
   }
   100% {
-    transform: rotate(360deg) translateX(0px);
+    transform: translate(-300px, 200px);
   }
 }
 
-@keyframes starsMove {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 10000px 10000px;
-  }
+.animate-swim1 {
+  animation: swim1 infinite linear;
 }
 
+.animate-swim2 {
+  animation: swim2 infinite linear;
+}
+
+.animate-swim3 {
+  animation: swim3 infinite linear;
+}
+
+.animate-swim4 {
+  animation: swim4 infinite linear;
+}

@@ -7,6 +7,7 @@ import './index.css'
 import Contact from './components/Contact/Contact';
 import { Toaster } from 'react-hot-toast';
 import Education from './components/Education/Education';
+import SkillsSection from './components/Skills/SkillsSection';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
          {/* <Navbar /> */}
         <section id='home' className=''><Navbar></Navbar></section>
         <section id="home" className=""><Hero></Hero></section>
-        <section id="skills" className=""></section>
+        <section id="skills" className=""><SkillsSection></SkillsSection></section>
         {/* <section id="projects" className="h-screen text-white p-10">Projects Section</section> */}
         <section id="experience" className=" "><Education></Education></section>
         <section id="contact" className=" "><Contact></Contact></section>
