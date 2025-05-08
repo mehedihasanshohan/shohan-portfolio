@@ -7,7 +7,7 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const menuItems = ["Home", "Skills", "Projects", "Contact"];
+  const menuItems = ["Home", "Skills", "Experience", "Projects", "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {

@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import Hero from './components/Hero/Hero'
 import Navbar from './components/Navbar/Navbar'
 import './index.css'
-import SkillGalaxy from './components/Skills/SkillGalaxy';
 import Contact from './components/Contact/Contact';
 import { Toaster } from 'react-hot-toast';
 import Education from './components/Education/Education';
@@ -23,10 +22,10 @@ function App() {
          {/* <Navbar /> */}
         <section id='home' className=''><Navbar></Navbar></section>
         <section id="home" className=""><Hero></Hero></section>
-        <section id="skills" className=""><SkillGalaxy></SkillGalaxy></section>
+        <section id="skills" className=""></section>
         {/* <section id="projects" className="h-screen text-white p-10">Projects Section</section> */}
+        <section id="experience" className=" "><Education></Education></section>
         <section id="contact" className=" "><Contact></Contact></section>
-        <section id="education" className=" "><Education></Education></section>
       {/* </div> */}
     </>
   )
