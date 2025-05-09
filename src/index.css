@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
 }
 
-
+/*
 @keyframes swim1 {
   0% {
     transform: translate(0, 0);
@@ -59,4 +59,119 @@ body {
 
 .animate-swim4 {
   animation: swim4 infinite linear;
+} */
+
+
+
+
+
+
+
+
+
+
+@keyframes swim1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(200px, 200px);
+  }
+}
+
+@keyframes swim2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-250px, 150px);
+  }
+}
+
+@keyframes swim3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(300px, -250px);
+  }
+}
+
+@keyframes swim4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-300px, 200px);
+  }
+}
+
+.animate-swim1 {
+  animation: swim1 10s linear infinite alternate;
+}
+
+.animate-swim2 {
+  animation: swim2 12s linear infinite alternate;
+}
+
+.animate-swim3 {
+  animation: swim3 14s linear infinite alternate;
+}
+
+.animate-swim4 {
+  animation: swim4 16s linear infinite alternate;
+}
+
+
+
+@keyframes swim1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(200px, 200px);
+  }
+}
+
+@keyframes swim2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-250px, 150px);
+  }
+}
+
+@keyframes swim3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(300px, -250px);
+  }
+}
+
+@keyframes swim4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-300px, 200px);
+  }
+}
+
+.animate-swim1 {
+  animation: swim1 10s linear infinite alternate;
+}
+
+.animate-swim2 {
+  animation: swim2 12s linear infinite alternate;
+}
+
+.animate-swim3 {
+  animation: swim3 1000s linear infinite alternate;
+}
+
+.animate-swim4 {
+  animation: swim4 16s linear infinite alternate;
 }

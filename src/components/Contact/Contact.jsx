@@ -255,7 +255,7 @@ export default function Contact() {
               <a href="tel:01985545365">01985545365</a>
             </span>
             <button
-                 onClick={() => copyToClipboard("01985545365")}
+                onClick={() => copyToClipboard("01985545365")}
                 className="text-cyan-300 hover:text-cyan-400"
                 title="Copy phone number"
              >
@@ -294,10 +294,8 @@ export default function Contact() {
           </a>
         </div>
         </div>
-
-
-
       </div>
+
 
       {/* Right Side Form */}
       <div
