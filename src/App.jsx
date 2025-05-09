@@ -8,6 +8,7 @@ import Contact from './components/Contact/Contact';
 import { Toaster } from 'react-hot-toast';
 import Education from './components/Education/Education';
 import SkillsSection from './components/Skills/SkillsSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         {/* <section id="projects" className="h-screen text-white p-10">Projects Section</section> */}
         <section id="experience" className=" "><Education></Education></section>
         <section id="contact" className=" "><Contact></Contact></section>
+        <section id='footer'><Footer></Footer></section>
       {/* </div> */}
     </>
   )
