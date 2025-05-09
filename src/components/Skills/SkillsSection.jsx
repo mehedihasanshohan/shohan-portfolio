@@ -413,7 +413,7 @@ const SkillsSection = () => {
               <selectedSkill.Icon className={`text-3xl ${selectedSkill.color}`} />
               <h2 className="text-2xl font-bold">{selectedSkill.name}</h2>
             </div>
-            <h3 className="text-lg font-semibold mb-2">Topics:</h3>
+            <h3 className="text-lg font-semibold mb-2 text-cyan-400"> What I've Learned in {selectedSkill.name}</h3>
             <ul className="list-disc pl-5 space-y-1">
               {selectedSkill.topics?.map((topic, idx) => (
                 <li key={idx}>{topic}</li>
