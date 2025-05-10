@@ -1,7 +1,16 @@
 import { Typewriter } from 'react-simple-typewriter';
 import img from '../../assets/2.png';
+import { useState } from 'react';
+import GitHubStats from '../Github/GitHubStats';
 
 export default function Hero() {
+  const [showGitModal, setShowGitModal] = useState(false);
+
+  const handleModalShow = () => {
+    // alert('openong modal with github stats');
+    setShowGitModal(true);
+
+  }
   return (
     <section className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] px-6 md:px-16 text-white">
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 w-full max-w-7xl">
@@ -105,6 +114,12 @@ export default function Hero() {
             </a>
             {/* custom btn ends here */}
 
+            {/* github link section */}
+              <div
+                    className='mt-6 text-cyan-300 cursor-pointer'
+                    onClick={handleModalShow}
+                    >
+              <btn><i>Show github insights</i></btn></div>
 
 
         </div>
@@ -132,6 +147,30 @@ export default function Hero() {
 </div>
 
         {/* right side ends */}
+
+
+        {/* modal section test */}
+        {showGitModal && (
+  <>
+    {/* Prevent background scroll */}
+    <style>{`body { overflow: hidden; }`}</style>
+
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
+      <div className="glass w-full h-screen relative p-6 text-white">
+        <button
+          onClick={() => setShowGitModal(false)}
+          className="absolute top-4 right-5 text-white text-2xl font-bold hover:text-cyan-400 transition"
+        >
+          &times;
+        </button>
+        <div className="h-full w-full">
+          <GitHubStats />
+        </div>
+      </div>
+    </div>
+  </>
+)}
+        {/* modal section test ends  */}
 
       </div>
     </section>

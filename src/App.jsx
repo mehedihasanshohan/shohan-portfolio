@@ -27,7 +27,7 @@ function App() {
         <section id="home" className=""><Hero></Hero></section>
         <section id="skills" className=""><SkillsSection></SkillsSection></section>
         {/* <section id="projects" className="h-screen text-white p-10">Projects Section</section> */}
-        <section id="experience" className=" "><Education></Education><GitHubStats></GitHubStats></section>
+        <section id="experience" className=" "><Education></Education></section>
         {/* <section  id='github'><GitHubStats></GitHubStats></section> */}
         <section id="contact" className=" "><Contact></Contact></section>
         <section id='footer'><Footer></Footer></section>
