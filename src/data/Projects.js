@@ -1,13 +1,15 @@
+import jsimg1 from "../../src/assets/cv-js.PNG"
+
 export const projects = [
   // Tailwind Projects
   {
     id: 1,
     category: "tailwind",
     title: "Tailwind Portfolio",
-    image: "/images/portfolio.png",
+    image: jsimg1,
     description: "A modern portfolio site built with Tailwind CSS.",
     tech: ["HTML", "Tailwind CSS"],
-    live: "https://example.com/portfolio",
+    live: "https://lws-state-react-assignment.netlify.app/",
     github: "https://github.com/user/portfolio",
     details: {
       screenshots: ["/images/portfolio-1.png", "/images/portfolio-2.png"],
@@ -19,10 +21,10 @@ export const projects = [
     id: 2,
     category: "tailwind",
     title: "Agency Landing",
-    image: "/images/agency.png",
+    image: jsimg1,
     description: "Landing page for digital agency using Tailwind.",
     tech: ["HTML", "Tailwind CSS"],
-    live: "https://example.com/agency",
+    live: "https://lws-state-react-assignment.netlify.app/",
     github: "https://github.com/user/agency-landing",
     details: {
       screenshots: ["/images/agency-1.png"],
@@ -33,11 +35,11 @@ export const projects = [
   {
     id: 3,
     category: "tailwind",
-    title: "Startup Hero",
-    image: "/images/startup.png",
+    title: "Rinterio",
+    image: jsimg1,
     description: "A startup-focused hero section design.",
     tech: ["HTML", "Tailwind CSS"],
-    live: "https://example.com/startup",
+    live: "https://landingpage2-tailwind.netlify.app/",
     github: "https://github.com/user/startup-hero",
     details: {
       screenshots: ["/images/startup-1.png"],
@@ -50,11 +52,11 @@ export const projects = [
   {
     id: 4,
     category: "vanilla",
-    title: "Image Editor App",
-    image: "/images/editor.png",
+    title: "To-Do App",
+    image: jsimg1,
     description: "Edit images with filters, rotate, and download.",
     tech: ["HTML", "CSS", "JavaScript"],
-    live: "https://example.com/editor",
+    live: "https://todo-23-javascript.netlify.app/",
     github: "https://github.com/user/image-editor",
     details: {
       screenshots: ["/images/editor-1.png"],
@@ -65,11 +67,11 @@ export const projects = [
   {
     id: 5,
     category: "vanilla",
-    title: "Weather App",
-    image: "/images/weather.png",
+    title: "CV Builder App",
+    image: jsimg1,
     description: "Simple weather app using OpenWeather API.",
     tech: ["JavaScript", "HTML", "CSS"],
-    live: "https://example.com/weather",
+    live: "https://cv-builder-js.netlify.app/",
     github: "https://github.com/user/weather-app",
     details: {
       screenshots: ["/images/weather-1.png"],
@@ -81,10 +83,10 @@ export const projects = [
     id: 6,
     category: "vanilla",
     title: "Shopping Cart",
-    image: "/images/cart.png",
+    image: jsimg1,
     description: "Add/remove items and calculate total price.",
     tech: ["JavaScript", "HTML", "CSS"],
-    live: "https://example.com/cart",
+    live: "https://do-shopping-23.netlify.app/",
     github: "https://github.com/user/shopping-cart",
     details: {
       screenshots: ["/images/cart-1.png"],
@@ -97,11 +99,11 @@ export const projects = [
   {
     id: 7,
     category: "react",
-    title: "CV Builder App",
-    image: "/images/cv-builder.png",
+    title: "Weather App",
+    image: jsimg1,
     description: "Create a CV live with real-time input preview.",
     tech: ["React", "Tailwind CSS"],
-    live: "https://example.com/cv",
+    live: "https://react-weather-app-23-81gcd45.netlify.app/",
     github: "https://github.com/user/cv-builder",
     details: {
       screenshots: ["/images/cv-1.png"],
@@ -113,7 +115,7 @@ export const projects = [
     id: 8,
     category: "react",
     title: "Image Gallery",
-    image: "/images/gallery.png",
+    image: jsimg1,
     description: "Filterable and responsive image gallery.",
     tech: ["React", "CSS"],
     live: "https://example.com/gallery",
@@ -128,7 +130,7 @@ export const projects = [
     id: 9,
     category: "react",
     title: "Bus Ticket Booking",
-    image: "/images/bus.png",
+    image: jsimg1,
     description: "Select seats, calculate total price, show summary.",
     tech: ["React", "Tailwind"],
     live: "https://example.com/bus",
