@@ -10,6 +10,7 @@ import Education from './components/Education/Education';
 import SkillsSection from './components/Skills/SkillsSection';
 import Footer from './components/Footer/Footer';
 import Projects from './components/Projects/Proojects';
+import TestSkills from './components/FilterSkills/TestSkills';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         {/* <section  id='github'><GitHubStats></GitHubStats></section> */}
         <section id="contact" className=" "><Contact></Contact></section>
         <section id='footer'><Footer></Footer></section>
+        <section id='filter-skills'><TestSkills></TestSkills></section>
       {/* </div> */}
     </>
   )
