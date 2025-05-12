@@ -188,3 +188,19 @@ body {
 }
 
 
+
+
+
+/* footer */
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce-arrow {
+  animation: bounceArrow 1.2s infinite ease-in-out;
+}

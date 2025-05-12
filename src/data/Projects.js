@@ -121,7 +121,7 @@ export const projects = [
     live: "https://example.com/gallery",
     github: "https://github.com/user/image-gallery",
     details: {
-      screenshots: ["/images/gallery-1.png"],
+      screenshots: [jsimg1],
       problem: "Images were overlapping on grid.",
       solution: "Used CSS Grid with proper breakpoints."
     }
