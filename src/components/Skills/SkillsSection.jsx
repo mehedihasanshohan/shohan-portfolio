@@ -226,6 +226,7 @@
 import { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -239,6 +240,21 @@ import {
   SiMongodb,
   SiExpress,
   SiNextdotjs,
+} from "react-icons/si";
+import {
+  FaGitAlt,
+  FaNpm,
+  FaFigma,
+  FaChrome,
+  FaUsers,
+  FaLightbulb,
+  FaClock,
+  FaComments
+} from "react-icons/fa";
+import {
+  SiPostman,
+  SiVite,
+  SiGoogledocs
 } from "react-icons/si";
 
 // Skill Data
@@ -281,6 +297,7 @@ const frontendSkills = [
   },
 ];
 
+// backend skills data
 const backendSkills = [
   {
     name: "Node.js",
@@ -308,49 +325,116 @@ const backendSkills = [
   },
 ];
 
+// tools data
+const toolSkills = [
+  {
+    name: "Git",
+    icon: FaGitAlt,
+    color: "text-orange-500",
+    topics: ["Version Control", "Branching", "Merging", "Rebasing"],
+  },
+  {
+    name: "Postman",
+    icon: SiPostman,
+    color: "text-orange-300",
+    topics: ["API Testing", "Collections", "Environment Variables"],
+  },
+  {
+    name: "Vite",
+    icon: SiVite,
+    color: "text-purple-400",
+    topics: ["Lightning Fast Build", "ES Modules", "Hot Module Reloading"],
+  },
+  {
+    name: "NPM",
+    icon: FaNpm,
+    color: "text-red-500",
+    topics: ["Package Management", "Scripts", "Dependencies"],
+  },
+  {
+    name: "Figma",
+    icon: FaFigma,
+    color: "text-pink-400",
+    topics: ["UI Design", "Prototyping", "Design Systems"],
+  },
+  {
+    name: "Chrome DevTools",
+    icon: FaChrome,
+    color: "text-blue-300",
+    topics: ["Inspect", "Console", "Network", "Performance"],
+  },
+];
+
+// softskills
+const softSkills = [
+  {
+    name: "Teamwork",
+    icon: FaUsers,
+    color: "text-purple-400",
+    topics: ["Collaboration", "Responsibility", "Empathy"],
+  },
+  {
+    name: "Problem Solving",
+    icon: FaLightbulb,
+    color: "text-yellow-400",
+    topics: ["Debugging", "Creative Thinking", "Root Cause Analysis"],
+  },
+  {
+    name: "Time Management",
+    icon: FaClock,
+    color: "text-green-400",
+    topics: ["Prioritization", "Task Planning", "Deadlines"],
+  },
+  {
+    name: "Communication",
+    icon: FaComments,
+    color: "text-cyan-300",
+    topics: ["Verbal", "Written", "Team Updates"],
+  },
+  {
+    name: "Documentation",
+    icon: SiGoogledocs,
+    color: "text-blue-400",
+    topics: ["Code Comments", "Project Docs", "README Writing"],
+  },
+];
+
+
 const SkillCard = ({ title, skills, titleColor, animationData, onClickIcon }) => (
   <div
     data-aos={animationData}
-    className="relative p-8 rounded-3xl bg-white/20 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-xl transition-shadow duration-300 z-10"
+    className="relative p-8 rounded-3xl bg-white/20
+              backdrop-blur-lg border border-white/20
+              shadow-lg hover:shadow-xl transition-shadow
+              duration-300 z-10"
   >
     <h2 className={`text-center text-2xl font-bold ${titleColor} mb-6 uppercase tracking-wide relative z-10`}>
       {title}
     </h2>
     <ul className="grid grid-cols-2 gap-6 relative z-10">
-      {/* {skills.map(({ name, icon: Icon, color, topics }) => (
-        <li
-          key={name}
-          className="flex items-center gap-4 text-white cursor-pointer hover:text-cyan-300"
-          onClick={() => onClickIcon({ name, Icon, color, topics })}
-        >
-          <Icon className={`text-3xl ${color}`} />
-          <span className="text-lg font-medium">{name}</span>
-        </li>
-      ))} */}
 
-
-      {/* test section start */}
+      {/* section start */}
       {skills.map(({ name, icon: Icon, color, topics }) => (
-  <li
-    key={name}
-    className="group flex items-center gap-4 text-white cursor-pointer hover:text-cyan-300"
-    onClick={() => onClickIcon({ name, Icon, color, topics })}
-  >
-    <Icon className={`text-3xl ${color}`} />
-    <div className="flex flex-col">
-      <span className="text-lg font-medium">{name}</span>
-      <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-cyan-200">
-        Click for more details
-      </span>
-    </div>
-  </li>
-))}
-
-        {/* test section ends */}
-
+        <li
+           key={name}
+           className="group flex items-center gap-4 text-white
+                      cursor-pointerhover:text-cyan-300"
+           onClick={() => onClickIcon({ name, Icon, color, topics })}
+         >
+        <Icon className={`text-3xl ${color}`} />
+          <div className="flex flex-col">
+            <span className="text-lg font-medium">{name}</span>
+            <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-cyan-200">
+               Click for more details
+            </span>
+          </div>
+        </li>
+      ))}
+     {/* section ends */}
     </ul>
   </div>
 );
+
 
 const SkillsSection = () => {
   const [selectedSkill, setSelectedSkill] = useState(null);
@@ -365,7 +449,7 @@ const SkillsSection = () => {
     <section className="min-h-screen bg-gradient-to-b from-[#1e293b] to-[#111827] px-4 py-16 flex items-center justify-center relative overflow-hidden">
       {/* Background floating icons */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-      {[...Array(3)].flatMap(() => [...frontendSkills, ...backendSkills]).map(({ icon: Icon, color }, index) => (
+      {[...Array(2)].flatMap(() => [...frontendSkills, ...backendSkills]).map(({ icon: Icon, color }, index) => (
     <Icon
       key={index}
       className={`text-4xl ${color} absolute ${
@@ -385,6 +469,8 @@ const SkillsSection = () => {
         <div className="text-center text-3xl font-bold text-white mb-8 col-span-2">
           <h1>My Skills</h1>
         </div>
+
+        {/* frontend cards */}
         <SkillCard
           title="Frontend"
           skills={frontendSkills}
@@ -392,11 +478,31 @@ const SkillsSection = () => {
           animationData="fade-left"
           onClickIcon={setSelectedSkill}
         />
+
+        {/* backend cards */}
         <SkillCard
           title="Backend"
           skills={backendSkills}
           titleColor="text-green-300"
           animationData="fade-right"
+          onClickIcon={setSelectedSkill}
+        />
+
+        {/* toools cards */}
+        <SkillCard
+          title="Tools"
+          skills={toolSkills}
+          titleColor="text-yellow-300"
+          animationData="fade-up"
+          onClickIcon={setSelectedSkill}
+        />
+
+        {/* softskills */}
+        <SkillCard
+          title="Soft Skills"
+          skills={softSkills}
+          titleColor="text-pink-300"
+          animationData="fade-down"
           onClickIcon={setSelectedSkill}
         />
       </div>
