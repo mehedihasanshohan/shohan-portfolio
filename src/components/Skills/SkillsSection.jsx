@@ -365,18 +365,17 @@ const SkillsSection = () => {
     <section className="min-h-screen bg-gradient-to-b from-[#1e293b] to-[#111827] px-4 py-16 flex items-center justify-center relative overflow-hidden">
       {/* Background floating icons */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-        {[...frontendSkills, ...backendSkills].map(({ icon: Icon, color }, index) => (
-          <Icon
-            key={index}
-            className={`text-4xl ${color} absolute ${
-              ["animate-swim1", "animate-swim2", "animate-swim3", "animate-swim4"][index % 4]
-            }`}
-            // className={`text-4xl ${color} animate-float absolute`}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
+      {[...Array(3)].flatMap(() => [...frontendSkills, ...backendSkills]).map(({ icon: Icon, color }, index) => (
+    <Icon
+      key={index}
+      className={`text-4xl ${color} absolute ${
+        ["animate-swim1", "animate-swim2", "animate-swim3", "animate-swim4"][index % 4]
+      }`}
+      style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 5}s`,
+      }}
           />
         ))}
       </div>
