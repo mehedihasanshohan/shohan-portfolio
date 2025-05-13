@@ -368,7 +368,10 @@ const SkillsSection = () => {
         {[...frontendSkills, ...backendSkills].map(({ icon: Icon, color }, index) => (
           <Icon
             key={index}
-            className={`text-4xl ${color} animate-float absolute`}
+            className={`text-4xl ${color} absolute ${
+              ["animate-swim1", "animate-swim2", "animate-swim3", "animate-swim4"][index % 4]
+            }`}
+            // className={`text-4xl ${color} animate-float absolute`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
