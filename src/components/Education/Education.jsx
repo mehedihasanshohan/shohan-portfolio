@@ -157,7 +157,12 @@ const educationData = [
     institute: "Online React Course",
     year: "2024",
     icon: <FaCode />,
-    desc: "Dived deep into React, component design, hooks, routing, and real-world app development.",
+    desc: `Dived deep into React, component design, hooks, routing, and real-world app development. The course covered:
+  - React Basics: Understanding JSX, props, state, and functional components.
+  - Hooks: Mastered React hooks like useState, useEffect, and custom hooks for better state management and side effects handling.
+  - Routing: Implemented navigation with React Router for building single-page applications with dynamic routes.
+  - Component Design: Designed reusable components with props and state, ensuring scalability and maintainability.
+  - State Management: Learned advanced state management techniques using Context API and Redux for complex applications.`,
   },
 ];
 

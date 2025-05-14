@@ -222,6 +222,7 @@
 
 
 
+// 4cards skills section
 
 import { useEffect, useState } from "react";
 import Aos from "aos";
@@ -535,3 +536,16 @@ const SkillsSection = () => {
 };
 
 export default SkillsSection;
+// 4 acrds section final
+
+
+
+
+
+
+
+
+
+
+
+
