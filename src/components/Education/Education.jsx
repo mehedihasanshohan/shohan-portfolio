@@ -138,8 +138,8 @@ const educationData = [
     desc: "Currently studying physics with a growing passion for programming and problem solving.",
   },
   {
-    title: "Programming Hero Course",
-    institute: "Online Bootcamp",
+    title: "Complete Web Development Course",
+    institute: "Programming Hero",
     year: "2023",
     icon: <FaLaptopCode />,
     desc: `Completed an intensive web development bootcamp covering:
@@ -153,8 +153,8 @@ const educationData = [
 - Deployment: Basics of Next.js & modern web app delivery.`,
   },
   {
-    title: "Learn with Sumit Course",
-    institute: "Online React Course",
+    title: "Reactive Accelarator",
+    institute: "Learn With Sumit",
     year: "2024",
     icon: <FaCode />,
     desc: `Dived deep into React, component design, hooks, routing, and real-world app development. The course covered:

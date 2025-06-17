@@ -33,6 +33,7 @@ function App() {
         <section id="contact" className=" "><Contact></Contact></section>
         <section id='footer'><Footer></Footer></section>
         <section id='filter-skills'><TestSkills></TestSkills></section>
+        
       {/* </div> */}
     </>
   )

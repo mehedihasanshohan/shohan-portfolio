@@ -179,7 +179,8 @@ import {
   Phone,
   User,
   MessageCircle,
-  ShieldCheck
+  ShieldCheck,
+  Github
 } from "lucide-react";
 
 export default function Contact() {
@@ -292,6 +293,16 @@ export default function Contact() {
           <a href="https://www.linkedin.com/in/mehedi-hasan-1a08b22b7/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
             <Linkedin />
           </a>
+
+                 <a
+    href="https://github.com/mehedihasanshohan"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-cyan-400"
+  >
+    <Github />
+  </a>
+
         </div>
         </div>
       </div>
