@@ -51,9 +51,9 @@ const projects = [
       "Architecting a scalable dashboard system for multiple user types.",
       "Advanced state management using TanStack Query and JWT security patterns."
     ],
-    technologies: ["React", "Node.js", "MongoDB", "TanStack Query", "Stripe", "JWT", "Express"],
-    live: "YOUR_CONTESTHUB_LIVE_LINK",
-    code: "YOUR_CONTESTHUB_GITHUB_LINK",
+    technologies: ["React", "React-Router", "Tailwindcss", "Daisyui", "React-Hook-Form", "TanStack Query", "Axios", "JWT", "Sweet Alert", "Local Storage", "Node.js", "MongoDB", "TanStack Query", "Stripe", "JWT", "Express"],
+    live: " https://contestverse-shohan.netlify.app/",
+    code: "https://github.com/mehedihasanshohan/contestverse",
   },
   {
     id: 3,
@@ -76,12 +76,11 @@ const projects = [
       "Learned how to implement Dark/Light mode toggle that persists in LocalStorage.",
       "Improved efficiency in handling image uploads and dynamic image rendering."
     ],
-    technologies: ["React", "Firebase", "MongoDB", "Node.js", "jsPDF", "Tailwind CSS"],
-    live: "YOUR_PAWMART_LIVE_LINK",
-    code: "YOUR_PAWMART_GITHUB_LINK",
+    technologies: ["React", "React-Router", "Tailwind CSS", "DaisyUI", "React Hook Form", "Firebase", "MongoDB", "Node.js", "jsPDF", "Expessjs", "React Hot Toast", "JWT", "Axios", "Local Storage"],
+    live: "https://pawmart-fullstack.netlify.app/",
+    code: " https://github.com/mehedihasanshohan/pawmart-client",
   }
 ];
-
 const Projects = () => {
   return (
     <section className="py-20 bg-[#0f172a] text-white px-6" id="projects">

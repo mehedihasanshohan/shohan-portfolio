@@ -86,7 +86,7 @@ export default function Contact() {
           <p className="flex items-center gap-2">
             <Phone className="text-cyan-300" size={18} />
             <span className="text-cyan-300">
-              <a href="tel:01985545365">01985545365</a>
+              <a href="tel:01985545365">01774767981</a>
             </span>
             <button
                 onClick={() => copyToClipboard("01985545365")}

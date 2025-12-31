@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,7 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const menuItems = ["Home", "Skills", "Experience", "Projects", "Contact"];
+  const menuItems = ["Home", "Skills", "Projects", "Experience",  "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,16 +28,16 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [menuItems]);
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg bg-white/10  border-b border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] ring-1 ring-white/10">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg bg-white/10  border-b border-white/50 ring-1 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="text-2xl font-bold tracking-widest text-white drop-shadow-[0_0_5px_cyan]">
-            Mehedi
-          </div>
+          <Link className="text-2xl font-bold tracking-widest text-white drop-shadow-[0_0_5px_cyan]">
+            Mehedi Hasan
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 text-white text-lg font-medium">
