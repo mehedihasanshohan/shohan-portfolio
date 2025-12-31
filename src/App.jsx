@@ -9,8 +9,9 @@ import { Toaster } from 'react-hot-toast';
 import Education from './components/Education/Education';
 import SkillsSection from './components/Skills/SkillsSection';
 import Footer from './components/Footer/Footer';
-import Projects from './components/Projects/Proojects';
-import TestSkills from './components/FilterSkills/TestSkills';
+import Projects from './components/Projects/Projects';
+// import TestSkills from './components/FilterSkills/TestSkills';
+import Photostack from './components/photostack/Photostack';
 
 function App() {
 
@@ -32,8 +33,8 @@ function App() {
         {/* <section  id='github'><GitHubStats></GitHubStats></section> */}
         <section id="contact" className=" "><Contact></Contact></section>
         <section id='footer'><Footer></Footer></section>
-        <section id='filter-skills'><TestSkills></TestSkills></section>
-        
+        {/* <section id='filter-skills'><TestSkills></TestSkills></section> */}
+        <section id='stack'><Photostack></Photostack> </section>
       {/* </div> */}
     </>
   )

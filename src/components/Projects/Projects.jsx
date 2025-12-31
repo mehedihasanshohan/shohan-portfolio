@@ -1,13 +1,8 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router";
-import ProjectDetails from './components/Projects/ProjectDetails.jsx';
-import img1 from "./assets/warmpose.PNG";
-import img2 from "./assets/contestverse.PNG";
-import img3 from "./assets/pawmart.PNG";
+import React from "react";
+import ProjectCard from "./ProjectCard";
+import img1 from "../../../src/assets/warmpose.PNG";
+import img2 from "../../../src/assets/contestverse.PNG";
+import img3 from "../../../src/assets/pawmart.PNG";
 
 const projects = [
   {
@@ -56,9 +51,9 @@ const projects = [
       "Architecting a scalable dashboard system for multiple user types.",
       "Advanced state management using TanStack Query and JWT security patterns."
     ],
-    technologies: ["React", "React-Router", "Tailwindcss", "Daisyui", "React-Hook-Form", "TanStack Query", "Axios", "JWT", "Sweet Alert", "Local Storage", "Node.js", "MongoDB", "TanStack Query", "Stripe", "JWT", "Express"],
-    live: " https://contestverse-shohan.netlify.app/",
-    code: "https://github.com/mehedihasanshohan/contestverse",
+    technologies: ["React", "Node.js", "MongoDB", "TanStack Query", "Stripe", "JWT", "Express"],
+    live: "YOUR_CONTESTHUB_LIVE_LINK",
+    code: "YOUR_CONTESTHUB_GITHUB_LINK",
   },
   {
     id: 3,
@@ -81,27 +76,26 @@ const projects = [
       "Learned how to implement Dark/Light mode toggle that persists in LocalStorage.",
       "Improved efficiency in handling image uploads and dynamic image rendering."
     ],
-    technologies: ["React", "React-Router", "Tailwind CSS", "DaisyUI", "React Hook Form", "Firebase", "MongoDB", "Node.js", "jsPDF", "Expessjs", "React Hot Toast", "JWT", "Axios", "Local Storage"],
-    live: "https://pawmart-fullstack.netlify.app/",
-    code: " https://github.com/mehedihasanshohan/pawmart-client",
+    technologies: ["React", "Firebase", "MongoDB", "Node.js", "jsPDF", "Tailwind CSS"],
+    live: "YOUR_PAWMART_LIVE_LINK",
+    code: "YOUR_PAWMART_GITHUB_LINK",
   }
 ];
 
+const Projects = () => {
+  return (
+    <section className="py-20 bg-[#0f172a] text-white px-6" id="projects">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-4">Projects</h2>
+        <p className="text-gray-400 mb-12">Some of my latest work</p>
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App></App>
-  },
-  {
-    path: "/project/:id",
-    element: <ProjectDetails projects={projects}></ProjectDetails>
-  }
-]);
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <RouterProvider router={router}>
-    </RouterProvider>
-  </StrictMode>,
-)
+export default Projects;

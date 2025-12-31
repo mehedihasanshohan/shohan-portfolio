@@ -1,144 +1,84 @@
-import jsimg1 from "../../src/assets/cv-js.PNG"
+// import img1 from "./assets/warmposerose.PNG";
+// import img2 from "./assets/contestverse.PNG";
+// import img3 from "./assets/pawmart.PNG";
 
-export const projects = [
-  // Tailwind Projects
-  {
-    id: 1,
-    category: "tailwind",
-    title: "Tailwind Portfolio",
-    image: jsimg1,
-    description: "A modern portfolio site built with Tailwind CSS.",
-    tech: ["HTML", "Tailwind CSS"],
-    live: "https://lws-state-react-assignment.netlify.app/",
-    github: "https://github.com/user/portfolio",
-    details: {
-      screenshots: ["/images/portfolio-1.png", "/images/portfolio-2.png"],
-      problem: "Responsive layout broke on tablets.",
-      solution: "Used Tailwind's responsive classes for layout fixes."
-    }
-  },
-  {
-    id: 2,
-    category: "tailwind",
-    title: "Agency Landing",
-    image: jsimg1,
-    description: "Landing page for digital agency using Tailwind.",
-    tech: ["HTML", "Tailwind CSS"],
-    live: "https://lws-state-react-assignment.netlify.app/",
-    github: "https://github.com/user/agency-landing",
-    details: {
-      screenshots: ["/images/agency-1.png"],
-      problem: "Header overlap issue on mobile.",
-      solution: "Adjusted z-index and padding classes."
-    }
-  },
-  {
-    id: 3,
-    category: "tailwind",
-    title: "Rinterio",
-    image: jsimg1,
-    description: "A startup-focused hero section design.",
-    tech: ["HTML", "Tailwind CSS"],
-    live: "https://landingpage2-tailwind.netlify.app/",
-    github: "https://github.com/user/startup-hero",
-    details: {
-      screenshots: ["/images/startup-1.png"],
-      problem: "Hero text wasn't centering.",
-      solution: "Used flexbox and justify-center properly."
-    }
-  },
+//  const projects = [
+//   {
+//     id: 1,
+//     title: "WarmPaws - Pet Care in Winter",
+//     description: "A cozy winter companion platform for pet owners providing winter care services.",
+//     image: img1,
+//     longDescription: "WarmPaws is a dedicated SPA (Single Page Application) designed to help pet owners navigate the cold season. It offers a curated list of winter services like coat fitting and paw grooming, expert vet tips, and a seamless booking system with Firebase authentication.",
+//     challenges: [
+//       "Implementing persistent authentication state to prevent redirects on page reloads.",
+//       "Securing sensitive Firebase configuration using environment variables in a client-side environment.",
+//       "Ensuring a minimalist yet functional UI that remains fully responsive across all screen sizes."
+//     ],
+//     solutions: [
+//       "Used Firebase's onAuthStateChanged observer and local storage to manage session persistence.",
+//       "Integrated .env files and utilized VITE_ prefixes (if using Vite) to mask API keys.",
+//       "Applied a mobile-first approach with Tailwind CSS and DaisyUI for consistent layouts."
+//     ],
+//     learning: [
+//       "Mastered React Router's protected route patterns and navigation state.",
+//       "Deep understanding of modern UI libraries like Framer Motion for subtle winter-themed animations.",
+//       "Improved skills in handling JSON-based dynamic data rendering."
+//     ],
+//     technologies: ["React", "Firebase", "Tailwind CSS", "DaisyUI", "React Hot Toast"],
+//     live: "YOUR_WARMPAWS_LIVE_LINK",
+//     code: "YOUR_WARMPAWS_GITHUB_LINK",
+//   },
+//   {
+//     id: 2,
+//     title: "ContestHub - Full Stack Platform",
+//     description: "A professional contest management system with secure payment and role-based access.",
+//     image: img2,
+//     longDescription: "ContestHub is a production-ready MERN stack application featuring Admin, Contest Creator, and Normal User roles. The platform manages everything from contest creation and admin approval to Stripe payment integration and dynamic winner declaration.",
+//     challenges: [
+//       "Implementing complex Role-Based Access Control (RBAC) across different dashboards.",
+//       "Managing high-concurrency data fetching and synchronization with server state.",
+//       "Securing the API endpoints to prevent unauthorized actions like deleting others' contests."
+//     ],
+//     solutions: [
+//       "Developed custom hooks and Axios interceptors for JWT-based authentication and role verification.",
+//       "Utilized TanStack Query (React Query) for caching and efficient data invalidation.",
+//       "Implemented MongoDB aggregation pipelines to generate a real-time leaderboard."
+//     ],
+//     learning: [
+//       "Professional integration of Stripe API for secure financial transactions.",
+//       "Architecting a scalable dashboard system for multiple user types.",
+//       "Advanced state management using TanStack Query and JWT security patterns."
+//     ],
+//     technologies: ["React", "Node.js", "MongoDB", "TanStack Query", "Stripe", "JWT", "Express"],
+//     live: "YOUR_CONTESTHUB_LIVE_LINK",
+//     code: "YOUR_CONTESTHUB_GITHUB_LINK",
+//   },
+//   {
+//     id: 3,
+//     title: "PawMart - Pet Adoption & Supply Portal",
+//     description: "A community-driven marketplace for pet adoption and pet-related products.",
+//     image: img3,
+//     longDescription: "PawMart connects pet lovers for adoption and shopping. It features a complete listing management system where users can add pets/products, manage their own listings, and place orders through a clean, tabular interface.",
+//     challenges: [
+//       "Creating a dynamic filtering system that works seamlessly with MongoDB data.",
+//       "Generating on-the-fly PDF reports for user orders for better record-keeping.",
+//       "Managing complex modal forms for ordering with auto-filled user information."
+//     ],
+//     solutions: [
+//       "Built a robust backend query system to filter listings by category and search terms.",
+//       "Integrated jsPDF and jsPDF-AutoTable to convert HTML tables into downloadable PDF documents.",
+//       "Used React Hook Form to manage form validation and auto-populated fields from Firebase Auth."
+//     ],
+//     learning: [
+//       "Gained expertise in full CRUD operations and database relationship handling (Users vs Listings).",
+//       "Learned how to implement Dark/Light mode toggle that persists in LocalStorage.",
+//       "Improved efficiency in handling image uploads and dynamic image rendering."
+//     ],
+//     technologies: ["React", "Firebase", "MongoDB", "Node.js", "jsPDF", "Tailwind CSS"],
+//     live: "YOUR_PAWMART_LIVE_LINK",
+//     code: "YOUR_PAWMART_GITHUB_LINK",
+//   }
+// ];
 
-  // Vanilla JS Projects
-  {
-    id: 4,
-    category: "vanilla",
-    title: "To-Do App",
-    image: jsimg1,
-    description: "Edit images with filters, rotate, and download.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    live: "https://todo-23-javascript.netlify.app/",
-    github: "https://github.com/user/image-editor",
-    details: {
-      screenshots: ["/images/editor-1.png"],
-      problem: "Filter values not syncing in real-time.",
-      solution: "Used canvas and input event listeners correctly."
-    }
-  },
-  {
-    id: 5,
-    category: "vanilla",
-    title: "CV Builder App",
-    image: jsimg1,
-    description: "Simple weather app using OpenWeather API.",
-    tech: ["JavaScript", "HTML", "CSS"],
-    live: "https://cv-builder-js.netlify.app/",
-    github: "https://github.com/user/weather-app",
-    details: {
-      screenshots: ["/images/weather-1.png"],
-      problem: "City search was lagging.",
-      solution: "Added debouncing to search input."
-    }
-  },
-  {
-    id: 6,
-    category: "vanilla",
-    title: "Shopping Cart",
-    image: jsimg1,
-    description: "Add/remove items and calculate total price.",
-    tech: ["JavaScript", "HTML", "CSS"],
-    live: "https://do-shopping-23.netlify.app/",
-    github: "https://github.com/user/shopping-cart",
-    details: {
-      screenshots: ["/images/cart-1.png"],
-      problem: "Price not updating properly.",
-      solution: "Fixed DOM updates inside loop."
-    }
-  },
+// export default projects;
 
-  // React Projects
-  {
-    id: 7,
-    category: "react",
-    title: "Weather App",
-    image: jsimg1,
-    description: "Create a CV live with real-time input preview.",
-    tech: ["React", "Tailwind CSS"],
-    live: "https://react-weather-app-23-81gcd45.netlify.app/",
-    github: "https://github.com/user/cv-builder",
-    details: {
-      screenshots: ["/images/cv-1.png"],
-      problem: "Live preview had sync issues.",
-      solution: "Used `useState` and `onChange` properly."
-    }
-  },
-  {
-    id: 8,
-    category: "react",
-    title: "Image Gallery",
-    image: jsimg1,
-    description: "Filterable and responsive image gallery.",
-    tech: ["React", "CSS"],
-    live: "https://example.com/gallery",
-    github: "https://github.com/user/image-gallery",
-    details: {
-      screenshots: [jsimg1],
-      problem: "Images were overlapping on grid.",
-      solution: "Used CSS Grid with proper breakpoints."
-    }
-  },
-  {
-    id: 9,
-    category: "react",
-    title: "Bus Ticket Booking",
-    image: jsimg1,
-    description: "Select seats, calculate total price, show summary.",
-    tech: ["React", "Tailwind"],
-    live: "https://example.com/bus",
-    github: "https://github.com/user/bus-booking",
-    details: {
-      screenshots: ["/images/bus-1.png"],
-      problem: "Double seat booking issue.",
-      solution: "Used state check to disable already booked seats."
-    }
-  }
-];
