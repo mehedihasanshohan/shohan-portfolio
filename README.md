@@ -1,12 +1,42 @@
-# React + Vite
+# 🌟 Modern Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, fully responsive portfolio website built with **React**, **Tailwind CSS**, and **Framer Motion**. Featuring interactive 3D effects, seamless animations, and integrated contact services.
 
-Currently, two official plugins are available:
+##  Live Demo
+**[View Live Site](https://your-portfolio-link.com)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **🏠 Home Section:** Engaging hero area with a professional introduction and smooth entrance animations.
+- **⚡ Skills:** Categorized technical expertise displayed with progress bars or interactive icons.
+- **💻 Interactive Projects:** - **3D Tilt Effect:** Project cards react to mouse movement using `react-parallax-tilt`.
+  - **Dynamic Routing:** Detailed project pages with challenges, solutions, and live links.
+- **💼 Experience:** A clean timeline or layout showcasing professional growth and past roles.
+- **📥 Resume Download:** One-click feature to download my latest CV in PDF format.
+- **📩 Contact with EmailJS:** A fully functional contact form that sends messages directly to my inbox without a backend.
+- **📍 Location Map:** Integrated interactive map showing my current region/availability.
+- **🎬 Animations:** Scroll-triggered animations and smooth transitions powered by **Framer Motion**.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Frontend** | React.js,  Tailwind CSS, DaisyUI |
+| **Animation** | Framer Motion, React-Parallax-Tilt |
+| **Connectivity** | EmailJS (Contact Form) |
+| **Maps** | Leaflet / React-Leaflet |
+| **Routing** | React Router |
+| **Deployment** | Netlify |
+
+---
+
+## **Installation & Local Setup**
+   ```bash
+   git clone https://github.com/mehedihasanshohan/shohan-portfolio
+   cd shohan-portfolio
+   npm install
+   npm run dev
