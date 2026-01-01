@@ -1,5 +1,5 @@
 import { Typewriter } from 'react-simple-typewriter';
-import img from '../../assets/2.png';
+import profileImg from '../../assets/profilephoto.png';
 import { useState } from 'react';
 import GitHubStats from '../Github/GitHubStats';
 import cv from '../../assets/2.pdf'
@@ -114,7 +114,7 @@ export default function Hero() {
         <div className="flex-1 flex justify-center" data-aos="fade-left">
           <div className="relative group rounded-full overflow-hidden w-82 h-82 bg-white/10 border-4 border-gradient-to-r from-blue-600 via-purple-500 to-pink-500 backdrop-blur-md shadow-[0_0_30px_#00ffff33] hover:shadow-[0_0_60px_#00ffff88] transition duration-500 hover:scale-105 animate-float">
             <img
-              src={img}
+              src={profileImg}
               alt="Mehedi"
               className="w-full h-full object-contain transition duration-500 group-hover:scale-110"
             />

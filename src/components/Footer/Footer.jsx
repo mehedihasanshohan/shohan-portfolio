@@ -1,5 +1,3 @@
-
-
 import { useState, useRef, useEffect } from "react";
 import { toPng } from "html-to-image";
 import img from "../../assets/2.png";
@@ -59,7 +57,7 @@ const downloadCard = async (e) => {
 
   return (
     <footer className="relative bg-[#0b1120] text-gray-400 py-10 px-6 border-t border-white/5">
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
 
         {/* Open Modal */}
         <div
@@ -72,8 +70,10 @@ const downloadCard = async (e) => {
             alt="Shohan"
             className="w-11 h-11 rounded-full border-2 border-cyan-400"
           />
-          <span className="text-white font-semibold">
+          <span className="text-cyan-400 font-semibold">
             Mehedi Hasan Shohan
+            <br />
+            <p className="text-[10px] text-white">click to download photocard</p>
           </span>
         </div>
 
@@ -92,7 +92,7 @@ const downloadCard = async (e) => {
             <div
               ref={cardRef}
               data-export-card
-              className="relative bg-[#0f172a] p-8 rounded-3xl w-[340px] text-center border border-white/10"
+              className="relative bg-[#0f172a] p-8 rounded-3xl w-full max-w-[340px] mx-auto text-center border border-white/10"
             >
               {/* Close */}
               <button
