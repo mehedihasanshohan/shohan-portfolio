@@ -239,7 +239,7 @@ const SkillCard = ({
 }) => (
   <div
     data-aos={animationData}
-    className="relative p-8 rounded-3xl bg-white/2
+    className="relative p-5 rounded-2xl md:p-8 bg-white/2
               backdrop-blur-lg border border-white/20
               shadow-lg hover:shadow-xl transition-shadow
               duration-300 z-10"
@@ -249,7 +249,8 @@ const SkillCard = ({
     >
       {title}
     </h2>
-    <ul className="grid grid-cols-2 gap-6 relative z-10">
+    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6
+     relative z-10">
       {/* section start */}
       {skills.map(({ name, icon: Icon, color, topics }) => (
         <li

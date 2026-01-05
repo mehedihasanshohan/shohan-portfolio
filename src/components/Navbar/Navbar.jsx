@@ -32,11 +32,14 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 backdrop-blur-lg
-     bg-white/10  border-b border-white/50 ring-1 ">
+       border-b border-white/20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link className="text-2xl font-bold tracking-widest text-white drop-shadow-[0_0_5px_cyan]">
+          <Link
+          className="text-2xl font-bold
+           tracking-widest
+            text-cyan-500">
             Mehedi Hasan
           </Link>
 
