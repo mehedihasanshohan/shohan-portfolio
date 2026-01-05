@@ -1,227 +1,256 @@
-// import { useEffect } from "react";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-// import { FaSchool, FaUniversity, FaLaptopCode, FaCode } from "react-icons/fa";
-
-// const educationData = [
-//   {
-//     title: "SSC",
-//     institute: "Goalanda Naziruddin Pilot Govt. High School",
-//     section: "Science",
-//     gpa: "5.00",
-//     year: "2019–2021",
-//     icon: <FaSchool />,
-//     desc: "Studied core science subjects and built a strong academic foundation.",
-//   },
-//   {
-//     title: "HSC",
-//     institute: "Goalanda Kamrul Islam Govt. College",
-//     section: "Science",
-//     gpa: "4.25",
-//     year: "2021–2023",
-//     icon: <FaSchool />,
-//     desc: "Focused on advanced level physics, chemistry, math, and ICT.",
-//   },
-//   {
-//     title: "BSc in Physics",
-//     institute: "Govt. Rajendra College",
-//     section: "Physics Department",
-//     gpa: "Running",
-//     year: "2023–Present",
-//     icon: <FaUniversity />,
-//     desc: "Currently studying physics with a growing passion for programming and problem solving.",
-//   },
-//   {
-//     title: "Programming Hero Course",
-//     institute: "Online Bootcamp",
-//     year: "2023",
-//     icon: <FaLaptopCode />,
-//     desc: "Learned programming fundamentals, HTML, CSS, JavaScript, and practical project building.",
-//   },
-//   {
-//     title: "Learn with Sumit Course",
-//     institute: "Online React Course",
-//     year: "2024",
-//     icon: <FaCode />,
-//     desc: "Dived deep into React, component design, hooks, routing, and real-world app development.",
-//   },
-// ];
-
-// export default function Education() {
-//   useEffect(() => {
-//     AOS.init({ duration: 1000, once: true });
-//   }, []);
-
-//   return (
-//     <section
-//       id="education"
-//       className="py-16 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white"
-//     >
-//       <h2 className="text-4xl font-bold text-center mb-16 text-sky-400">Education & Learning Journey</h2>
-
-//       <div className="relative max-w-5xl mx-auto">
-//         {/* vertical line */}
-//         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-cyan-500 to-indigo-500 z-0"></div>
-
-//         <div className="flex flex-col gap-16 relative z-10">
-//           {educationData.map((edu, index) => {
-//             const isLeft = index % 2 === 0;
-//             return (
-//               <div
-//                 key={index}
-//                 data-aos="fade-up"
-//                 className={`w-full flex ${isLeft ? "justify-start" : "justify-end"}`}
-//               >
-//                 <div className={`w-[90%] md:w-1/2 px-4`}>
-//                   <div
-//                     className={`bg-gray-800 hover:bg-gray-700 transition-all duration-300 border-l-4 ${
-//                       isLeft ? "border-cyan-500" : "border-indigo-500"
-//                     } p-6 rounded-lg shadow-xl`}
-//                   >
-//                     <div className="flex items-center gap-3 text-cyan-400 mb-2 text-xl">
-//                       <span>{edu.icon}</span>
-//                       <h3 className="font-bold">{edu.title}</h3>
-//                     </div>
-//                     <p className="text-sm text-gray-300 mb-1">{edu.institute}</p>
-//                     {edu.section && <p className="text-sm text-gray-400">Group: {edu.section}</p>}
-//                     {edu.gpa && <p className="text-sm text-gray-400">GPA: {edu.gpa}</p>}
-//                     <p className="text-xs text-gray-500 mb-2">{edu.year}</p>
-//                     <p className="text-gray-300 text-sm">{edu.desc}</p>
-//                   </div>
-//                 </div>
-//               </div>
-//             );
-//           })}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-
-
-
-
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaSchool, FaUniversity, FaLaptopCode, FaCode } from "react-icons/fa";
+import {
+  FaSchool,
+  FaUniversity,
+  FaLaptopCode,
+  FaCode,
+  FaGraduationCap,
+  FaCheckCircle,
+  FaTerminal,
+} from "react-icons/fa";
 
 const educationData = [
   {
+    id: 1,
     title: "SSC",
-    institute: "Goalanda Naziruddin Pilot Govt. High School",
-    section: "Science",
-    gpa: "5.00",
-    year: "2019–2021",
+    institute: "Goalanda Naziruddin Govt. High School",
+    result: "GPA 5.00",
+    year: "2019-2021",
     icon: <FaSchool />,
-    desc: "Studied core science subjects and built a strong academic foundation.",
+    category: "academic",
+    desc: "Studied core science subjects and built a strong academic foundation for future engineering studies.",
   },
   {
+    id: 2,
     title: "HSC",
     institute: "Goalanda Kamrul Islam Govt. College",
-    section: "Science",
-    gpa: "4.25",
-    year: "2021–2023",
-    icon: <FaSchool />,
-    desc: "Focused on advanced level physics, chemistry, math, and ICT.",
+    result: "GPA 4.25",
+    year: "2015-2017",
+    icon: <FaGraduationCap />,
+    category: "academic",
+    desc: "Focused on advanced level Physics, Chemistry, Mathematics, and Information & Communication Technology (ICT).",
   },
   {
+    id: 3,
     title: "BSc in Physics",
     institute: "Govt. Rajendra College",
-    section: "Physics Department",
-    gpa: "Running",
-    year: "2023–Present",
+    result: "Dropuot",
+    year: "2017-2019",
     icon: <FaUniversity />,
-    desc: "Currently studying physics with a growing passion for programming and problem solving.",
+    category: "academic",
+    desc: "Currently pursuing a degree in Physics, which helps me sharpen my analytical thinking and complex problem-solving skills.",
   },
   {
-    title: "Complete Web Development Course",
+    id: 4,
+    title: "Complete Web Development",
     institute: "Programming Hero",
-    year: "2023",
+    year: "2025",
     icon: <FaLaptopCode />,
-    desc: `Completed an intensive web development bootcamp covering:
-- HTML & CSS: Clean, responsive UI design.
-- JavaScript: Core concepts, DOM, and logic building.
-- React: Components, props, state, and hooks.
-- Backend: Node.js, Express, MongoDB fundamentals.
-- Authentication: JWT implementation.
-- API integration: Using Axios.
-- Routing: React Router & dynamic navigation.
-- Deployment: Basics of Next.js & modern web app delivery.`,
+    category: "tech",
+    points: [
+      "Full-stack development with MERN (MongoDB, Express, React, Node.js)",
+      "Authentication using Firebase and JWT (JSON Web Tokens)",
+      "State management and API integration using Axios and TanStack Query",
+      "Building responsive and modern UIs with Tailwind CSS and DaisyUI",
+    ],
+    skills: ["React", "Node.js", "MongoDB", "Express", "Next.js"],
+    desc: "An intensive bootcamp focusing on professional web development standards and real-world project building.",
   },
   {
-    title: "Reactive Accelarator",
+    id: 5,
+    title: "Reactive Accelerator",
     institute: "Learn With Sumit",
     year: "2024",
     icon: <FaCode />,
-    desc: `Dived deep into React, component design, hooks, routing, and real-world app development. The course covered:
-  - React Basics: Understanding JSX, props, state, and functional components.
-  - Hooks: Mastered React hooks like useState, useEffect, and custom hooks for better state management and side effects handling.
-  - Routing: Implemented navigation with React Router for building single-page applications with dynamic routes.
-  - Component Design: Designed reusable components with props and state, ensuring scalability and maintainability.
-  - State Management: Learned advanced state management techniques using Context API and Redux for complex applications.`,
+    category: "tech",
+    points: [
+      "Advanced React patterns, Render Props, and Higher Order Components (HOC)",
+      "Centralized state management with Redux Toolkit and RTK Query",
+      "Deep dive into React Hooks, Performance Optimization, and Memoization",
+      "Clean architecture and building scalable enterprise-level applications",
+    ],
+    skills: ["Redux", "Hooks", "Patterns", "Optimization"],
+    desc: "A specialized course designed to master React ecosystem and advanced frontend architecture.",
   },
 ];
 
 export default function Education() {
+  const [filter, setFilter] = useState("academic");
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
+    AOS.init({ duration: 800, once: false });
+    const handleMouseMove = (e) => setMousePos({ x: e.clientX, y: e.clientY });
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [filter]);
+
+  const filteredData = educationData.filter((item) => item.category === filter);
 
   return (
-    <section
-      id="education"
-      className="py-16 px-4 bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white"
-    >
-      <h2 className="text-4xl font-bold text-center mb-16 text-sky-400">
-        Education & Learning Journey
-      </h2>
+    <section className="py-20 bg-[#0f172a] text-white px-6">
+      {/* Mouse Glow */}
+      <div
+        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300 opacity-20"
+        style={{
+          background: `radial-gradient(600px at ${mousePos.x}px ${mousePos.y}px, rgba(99, 102, 241, 0.2), transparent 80%)`,
+        }}
+      />
 
-      <div className="relative max-w-5xl mx-auto">
-        {/* vertical line */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-indigo-400 to-indigo-600 z-0"></div>
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16" data-aos="fade-down">
+          <h2 className="text-4xl mb-4">Path of Knowledge</h2>
 
-        <div className="flex flex-col gap-16 relative z-10">
-          {educationData.map((edu, index) => {
-            const isLeft = index % 2 === 0;
-            const sideGlow = isLeft
-              ? "border-l-4 border-indigo-400"
-              : "border-r-4 border-indigo-400";
-            const softGlow = "shadow-[0_0_15px_#4f46e533]";
-
-            return (
-              <div
-                key={index}
-                data-aos={isLeft ? "fade-right" : "fade-left"}
-                className={`w-full flex ${isLeft ? "justify-start" : "justify-end"}`}
+          <div
+            className="inline-flex bg-slate-900/80 p-1.5
+           rounded-2xl border border-slate-700
+            backdrop-blur-md shadow-2xl"
+          >
+            {["academic", "tech"].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setFilter(tab)}
+                className={`relative px-12 py-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all duration-500 ${
+                  filter === tab
+                    ? "bg-cyan-400 text-white "
+                    : "text-slate-500 hover:text-slate-300"
+                }`}
               >
-                <div className="w-[90%] md:w-1/2 px-4">
-                  <div
-                    className={`bg-[#111827] backdrop-blur-sm ${sideGlow} ${softGlow} p-6 rounded-xl transition-all duration-300 hover:scale-[1.02]`}
+                {tab}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Dynamic Grid */}
+        <div
+          className={`grid gap-10 transition-all duration-700
+          ${
+            filter === "academic"
+              ? "grid-cols-1 md:grid-cols-3"
+              : "grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto"
+          }`}
+        >
+          {filteredData.map((edu) => (
+            <div
+              key={edu.id}
+              data-aos="zoom-in-up"
+              //  data-aos={animationData}
+              className="relative p-8 rounded-3xl bg-white/2
+              backdrop-blur-lg border border-white/20
+              shadow-lg hover:shadow-xl transition-shadow
+              duration-300 z-10"
+            >
+              {/* <div
+                className="relative p-8 rounded-3xl
+              backdrop-blur-lg border border-white/20
+              shadow-lg hover:shadow-xl transition-shadow
+              duration-300 z-10"
+              > */}
+
+              {/* Decorative Background Element */}
+              <div
+                className="absolute -right-8
+                 -top-8 w-24 h-24 bg-rose-600/60
+                rounded-full blur-3xl group-hover:bg-indigo-600/20 transition-all"
+              ></div>
+
+              <div className="flex justify-between items-center mb-8">
+                <div
+                  className="w-16 h-16 bg-indigo-500/10 rounded-2xl flex items-center
+                   justify-center text-4xl text-indigo-400 group-hover:scale-110
+                    transition-all duration-500"
+                >
+                  {edu.icon}
+                </div>
+                <div className="flex flex-col items-end">
+                  <span
+                    className="text-[10px] font-black py-1 px-4
+                     bg-indigo-500/10 rounded-full text-indigo-400 ring-1
+                      ring-indigo-500/30 mb-2 uppercase tracking-widest"
                   >
-                    <div className="flex items-center gap-4 text-indigo-300 text-2xl mb-3">
-                      <span className="text-indigo-400 animate-pulse">{edu.icon}</span>
-                      <h3 className="font-bold text-white text-xl">{edu.title}</h3>
-                    </div>
-                    <p className="text-sm text-gray-300 font-medium">{edu.institute}</p>
-                    {edu.section && (
-                      <p className="text-sm text-indigo-200">Group: {edu.section}</p>
-                    )}
-                    {edu.gpa && (
-                      <p className="text-sm text-indigo-200">GPA: {edu.gpa}</p>
-                    )}
-                    <p className="text-xs text-gray-400 mb-3">{edu.year}</p>
-                    <p className="text-gray-200 text-sm whitespace-pre-line leading-relaxed tracking-wide">
-                      {edu.desc}
-                    </p>
-                  </div>
+                    {edu.year}
+                  </span>
+                  {edu.result && (
+                    <span className="text-xs text-slate-500 font-mono">
+                      {edu.result}
+                    </span>
+                  )}
                 </div>
               </div>
-            );
-          })}
+
+              <h3
+                className="text-xl font-bold mb-2 group-hover:text-cyan-400
+                transition-colors uppercase"
+              >
+                {edu.title}
+              </h3>
+              <p className="text-slate-500 text-sm mb-6 font-medium tracking-wide">
+                {edu.institute}
+              </p>
+
+              {/* Points for Tech Section */}
+              {edu.points ? (
+                <ul className="space-y-3 mb-6">
+                  {edu.points.map((point, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-3 text-sm text-slate-400 leading-snug"
+                    >
+                      <FaTerminal className="mt-1 text-xs text-indigo-500 shrink-0" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p
+                  className="text-slate-400 text-sm leading-relaxed
+                   mb-6 italic border-l-2 border-indigo-500/20 pl-4"
+                >
+                  {edu.desc}
+                </p>
+              )}
+
+              {/* Skills Badges */}
+              <div className="mt-auto pt-6 border-t border-slate-800/50">
+                {edu.skills && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {edu.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="text-[10px] uppercase tracking-wider text-blue-300
+                           bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                <div
+                  className="flex items-center gap-2
+                   text-[10px] font-black tracking-[0.2em]
+                    uppercase text-slate-500
+                     group-hover:text-indigo-400 transition-colors"
+                >
+                  <FaCheckCircle
+                    className={
+                      edu.result === "Dropout"
+                        ? "text-yellow-500 animate-pulse"
+                        : "text-indigo-500"
+                    }
+                  />
+                  <span>
+                    {edu.result === "Dropout" ? "Dropout" : "Certified"}
+                  </span>
+                </div>
+              </div>
+            </div>
+            // </div>
+          ))}
         </div>
       </div>
     </section>

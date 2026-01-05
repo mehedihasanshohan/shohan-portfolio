@@ -239,7 +239,7 @@ const SkillCard = ({
 }) => (
   <div
     data-aos={animationData}
-    className="relative p-8 rounded-3xl bg-white/20
+    className="relative p-8 rounded-3xl bg-white/2
               backdrop-blur-lg border border-white/20
               shadow-lg hover:shadow-xl transition-shadow
               duration-300 z-10"
@@ -282,7 +282,7 @@ const SkillsSection = () => {
   const closeModal = () => setSelectedSkill(null);
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-[#1e293b] to-[#111827] px-4 py-16 flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen  bg-[#0f172a] px-4 py-16 flex items-center justify-center relative overflow-hidden">
       {/* Background floating icons */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         {[...Array(4)]
@@ -353,7 +353,8 @@ const SkillsSection = () => {
       {/* Modal */}
       {selectedSkill && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center px-4">
-          <div className="bg-white/10 border border-white/20 rounded-2xl p-6 max-w-md w-full text-white relative shadow-xl backdrop-blur-lg">
+          <div className="bg-white/10 border border-white/20
+          rounded-2xl p-6 max-w-md w-full text-white relative shadow-xl backdrop-blur-lg">
             <button
               onClick={closeModal}
               className="absolute top-2 right-3 text-white text-xl font-bold"

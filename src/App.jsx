@@ -10,6 +10,7 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import { useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
+import AboutMe from './components/About/AboutMe';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
          {/* <Navbar /> */}
         <section className=''><Navbar></Navbar></section>
         <section id="home" className=""><Hero></Hero></section>
+        <section><AboutMe></AboutMe></section>
         <section id="skills" className=""><SkillsSection></SkillsSection></section>
         <section id="projects" className=""><Projects></Projects></section>
         <section id="experience" className=" "><Education></Education></section>

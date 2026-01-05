@@ -13,6 +13,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <Tilt
+
       glareEnable
       glareMaxOpacity={0.05}
       scale={1.02}
@@ -20,8 +21,10 @@ const ProjectCard = ({ project }) => {
       className="rounded-2xl h-full cursor-pointer"
     >
       <div
+        data-aos="fade-up"
         onClick={handleCardClick}
-        className="group relative h-full flex flex-col overflow-hidden rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md transition-all duration-300 hover:border-blue-500/30"
+        className="group relative h-full flex flex-col overflow-hidden rounded-xl bg-white/2 border
+         border-white/10 backdrop-blur-xl transition-all duration-300"
       >
         {/* Image Container */}
         <div className="relative overflow-hidden h-48">
@@ -40,11 +43,11 @@ const ProjectCard = ({ project }) => {
 
         {/* Content */}
         <div className="p-5 flex flex-col flex-grow space-y-3">
-          <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+          <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
             {project.title}
           </h3>
 
-          <p className="text-sm text-gray-400 line-clamp-2">
+          <p className="text-sm text-slate-400 line-clamp-2">
             {project.description}
           </p>
 
@@ -53,7 +56,8 @@ const ProjectCard = ({ project }) => {
             {project.technologies?.slice(0, 3).map((tech, idx) => (
               <span
                 key={idx}
-                className="text-[10px] uppercase tracking-wider text-blue-300 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded"
+                className="text-[10px] uppercase tracking-wider text-blue-300
+                 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded"
               >
                 {tech}
               </span>
@@ -72,7 +76,7 @@ const ProjectCard = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()} // Card click event off kore
-              className="text-sm text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors z-10"
+              className="text-sm  hover:text-cyan-400 flex items-center gap-1.5 transition-colors z-10"
             >
               <FiExternalLink /> Live
             </a>
@@ -81,7 +85,7 @@ const ProjectCard = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()} // Card click event off kore
-              className="text-sm text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors z-10"
+              className="text-sm text-white hover:text-cyan-400 flex items-center gap-1.5 transition-colors z-10"
             >
               <FiGithub /> Code
             </a>
