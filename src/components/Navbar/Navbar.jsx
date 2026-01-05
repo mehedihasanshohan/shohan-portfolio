@@ -8,7 +8,7 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const menuItems = ["Home", "Skills", "Projects", "Experience",  "Contact"];
+  const menuItems = ["Home", "Projects", "Skills", "Experience", "About", "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +31,8 @@ export default function Navbar() {
   }, [menuItems]);
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg bg-white/10  border-b border-white/50 ring-1 ">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg
+     bg-white/10  border-b border-white/50 ring-1 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -55,7 +56,8 @@ export default function Navbar() {
                 >
                   {item}
                   <span
-                    className={`absolute left-0 -bottom-1 h-0.5 bg-cyan-300 transition-all duration-300 ease-in-out ${
+                    className={`absolute left-0 -bottom-1 h-0.5 bg-cyan-300
+                      transition-all duration-300 ease-in-out ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   ></span>
@@ -75,7 +77,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pt-2 pb-4 text-center space-y-3 backdrop-blur-lg bg-white/10 border-t border-white/20 shadow-inner">
+        <div className="md:hidden px-4 pt-2 pb-4 text-center space-y-3
+         backdrop-blur-lg bg-white/10 border-t border-white/20 shadow-inner">
           {menuItems.map((item) => {
             const id = item.toLowerCase();
             const isActive = active === id;

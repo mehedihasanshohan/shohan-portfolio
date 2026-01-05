@@ -4,9 +4,9 @@ import {
   FaBookOpen,
   FaUsers,
   FaTerminal,
-  FaCode,
-  FaRocket,
 } from "react-icons/fa";
+import { GiTeacher } from "react-icons/gi";
+
 
 const TerminalCode = () => {
   const [text, setText] = useState("");
@@ -132,7 +132,7 @@ export default function AboutMe() {
                 </div>
               </div>
               <div className="p-4 rounded-2xl bg-white/2 border border-white/10 flex flex-col gap-3">
-                <FaUsers className="text-purple-400 text-xl" />
+                <FaUsers className="text-indigo-400 text-xl" />
                 <div>
                   <h4 className="font-medium text-sm">Family Roots</h4>
                   <p className="text-xs text-slate-500">
@@ -141,7 +141,7 @@ export default function AboutMe() {
                 </div>
               </div>
               <div className="p-4 rounded-2xl bg-white/2 border border-white/10 flex flex-col gap-3">
-                <FaRocket className="text-cyan-400 text-xl" />
+                <GiTeacher className="text-indigo-400 text-xl" />
                 <div>
                   <h4 className="font-medium text-sm">Teaching</h4>
                   <p className="text-xs text-slate-500">

@@ -1,28 +1,37 @@
-
-
 import toast from "react-hot-toast";
 import { Copy } from "lucide-react";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import {
   Facebook,
-  Mail,
   Linkedin,
   MapPin,
   Phone,
   User,
   MessageCircle,
   ShieldCheck,
-  Github
+  Github,
 } from "lucide-react";
+import { Mail } from 'lucide-react';
+
+import { FaPhone } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { IoLocationSharp } from "react-icons/io5";
+
 
 export default function Contact() {
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
-    // alert("📋 Phone number copied!");
-    toast.success("📋 Phone number copied!");
+    toast.success("Phone number copied!");
   };
+
+  const emailCopyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
+    toast.success("Email copied!");
+  };
+
+
 
   const [form, setForm] = useState({
     name: "",
@@ -40,7 +49,7 @@ export default function Contact() {
     e.preventDefault();
 
     if (form.captcha.trim().toLowerCase() !== "human") {
-      setStatus("❌ Captcha failed. Type 'human' correctly.");
+      setStatus("Captcha failed. Type 'human' correctly.");
       return;
     }
 
@@ -59,42 +68,56 @@ export default function Contact() {
       )
       .then(
         () => {
-          setStatus("✅ Message sent successfully!");
+          setStatus("Message sent successfully!");
           setForm({ name: "", email: "", message: "", captcha: "" });
         },
         () => {
-          setStatus("❌ Failed to send. Try again.");
+          setStatus("Failed to send. Try again.");
         }
       );
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white px-6 py-12 flex flex-col md:flex-row gap-10 justify-center items-center">
-
+    <section className="py-20 bg-[#0f172a] text-white px-6 grid lg:grid-cols-2 gap-6">
       {/* Left Side */}
       <div
-        className="md:w-1/2 space-y-6 rounded-xl p-6 border border-cyan-400"
+        className="space-y-6 rounded-xl p-6 bg-white/2 relative z-20 border border-white/20"
         data-aos="fade-right"
         data-aos-duration="1000"
       >
-        <h2 className="text-3xl font-bold text-cyan-400">Get In Touch</h2>
-        <div className="space-y-3 text-sm">
+        <h2 className="text-4xl font-bold ">Get In Touch</h2>
+        <div className="space-y-3">
           <p className="flex items-center gap-2">
-            <MapPin className="text-cyan-300" size={18} />
-            <span className="text-cyan-300">Thana: Goalanda; District: Rajbari</span>
-          </p>
-          <p className="flex items-center gap-2">
-            <Phone className="text-cyan-300" size={18} />
-            <span className="text-cyan-300">
+            <Phone className="text-cyan-400" size={18} />
+            <span className="">
               <a href="tel:01985545365">01774767981</a>
             </span>
             <button
-                onClick={() => copyToClipboard("01985545365")}
-                className="text-cyan-300 hover:text-cyan-400"
-                title="Copy phone number"
-             >
+              onClick={() => copyToClipboard("01985545365")}
+              className="text-cyan-300 hover:text-cyan-400"
+              title="Copy phone number"
+            >
               <Copy size={16} />
-           </button>
+            </button>
+          </p>
+          <p className="flex items-center gap-2">
+            <MdEmail className="text-cyan-400" size={18} />
+            <span className="">
+              <a href="tel:01985545365">mhshohan01@gmail.com</a>
+            </span>
+            <button
+              onClick={() => emailCopyToClipboard("mhshohan01@gmail.com")}
+              className="text-cyan-300 hover:text-cyan-400"
+              title="Copy my email"
+            >
+              <Copy size={16} />
+            </button>
+          </p>
+          <p className="flex items-center opacity-80 gap-2">
+            <IoLocationSharp className="text-cyan-400" size={18} />
+            <span className="">
+              Thana: Goalanda; District: Rajbari
+            </span>
           </p>
         </div>
 
@@ -108,46 +131,55 @@ export default function Contact() {
           ></iframe>
         </div>
 
-        <div className="border p-2 border-cyan-300 rounded-xl">
-        <div className="text-cyan-300 font-bold text-2xl">Follow Me</div>
-        <div className="flex gap-4 mt-4 text-xl">
-          <a href="https://www.facebook.com/profile.php?id=100007820023284" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
-            <Facebook />
-          </a>
+        <div className="border p-2 rounded-xl">
+          <div className="font-bold text-xl">Follow Me</div>
+          <div className="flex gap-4 mt-4 text-xl">
+            <a
+              href="https://www.facebook.com/profile.php?id=100007820023284"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400"
+            >
+              <Facebook />
+            </a>
 
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=mhshohan01@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400">
-           <Mail />
-          </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=mhshohan01@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400"
+            >
+              <Mail />
+            </a>
 
-          <a href="https://www.linkedin.com/in/mehedi-hasan-1a08b22b7/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
-            <Linkedin />
-          </a>
+            <a
+              href="https://www.linkedin.com/in/mehedi-hasan-1a08b22b7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400"
+            >
+              <Linkedin />
+            </a>
 
-                 <a
-    href="https://github.com/mehedihasanshohan"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-cyan-400"
-  >
-    <Github />
-  </a>
-
-        </div>
+            <a
+              href="https://github.com/mehedihasanshohan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400"
+            >
+              <Github />
+            </a>
+          </div>
         </div>
       </div>
 
-
       {/* Right Side Form */}
       <div
-        className="md:w-1/2 bg-[#0f172a] rounded-xl p-6 shadow-xl border border-cyan-400"
+        className="bg-white/2 rounded-xl p-6 shadow-xl relative z-10 border border-white/20"
         data-aos="fade-left"
         data-aos-duration="1000"
       >
-        <h2 className="text-2xl font-bold mb-4 text-cyan-300">Send Message</h2>
+        <h2 className="text-2xl font-bold mb-4">Send Message</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
             <User className="absolute left-3 top-3 text-cyan-500" size={20} />
@@ -158,7 +190,7 @@ export default function Contact() {
               value={form.name}
               onChange={handleChange}
               required
-              className="w-full pl-10 p-3 rounded-lg bg-[#1e293b] border border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="w-full pl-10 p-3 rounded-lg bg-[#1e293b] border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
             />
           </div>
 
@@ -171,12 +203,15 @@ export default function Contact() {
               value={form.email}
               onChange={handleChange}
               required
-              className="w-full pl-10 p-3 rounded-lg bg-[#1e293b] border border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="w-full pl-10 p-3 rounded-lg bg-[#1e293b] border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
             />
           </div>
 
           <div className="relative">
-            <ShieldCheck className="absolute left-3 top-3 text-cyan-500" size={20} />
+            <ShieldCheck
+              className="absolute left-3 top-3 text-cyan-500"
+              size={20}
+            />
             <input
               type="text"
               name="captcha"
@@ -184,25 +219,28 @@ export default function Contact() {
               value={form.captcha}
               onChange={handleChange}
               required
-              className="w-full pl-10 p-3 rounded-lg bg-[#1e293b] border border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="w-full pl-10 p-3 rounded-lg bg-[#1e293b] border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
             />
           </div>
 
           <div className="relative">
-            <MessageCircle className="absolute left-3 top-3 text-cyan-500" size={20} />
+            <MessageCircle
+              className="absolute left-3 top-3 text-cyan-500"
+              size={20}
+            />
             <textarea
               name="message"
               placeholder="Your Message"
               value={form.message}
               onChange={handleChange}
               rows="4"
-              className="w-full pl-10 p-3 rounded-lg bg-[#1e293b] border border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="w-full pl-10 p-3 rounded-lg bg-[#1e293b] border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-300"
+            className="w-full bg-cyan-400 cursor-pointer mt-4 hover:bg-cyan-500 text-white font-semibold py-3 px-4 rounded-lg transition duration-300"
           >
             Send Message
           </button>

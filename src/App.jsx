@@ -21,17 +21,14 @@ function App() {
   return (
     <>
       <Toaster position='top-right'></Toaster>
-      {/* <div className="min-h-screen bg-gradient-to-br from-[#1e293b] to-[#0f172a]"> */}
-         {/* <Navbar /> */}
-        <section className=''><Navbar></Navbar></section>
-        <section id="home" className=""><Hero></Hero></section>
-        <section><AboutMe></AboutMe></section>
-        <section id="skills" className=""><SkillsSection></SkillsSection></section>
-        <section id="projects" className=""><Projects></Projects></section>
-        <section id="experience" className=" "><Education></Education></section>
-        <section id="contact" className=" "><Contact></Contact></section>
+        <section><Navbar></Navbar></section>
+        <section id="home"><Hero></Hero></section>
+        <section id="projects"><Projects></Projects></section>
+        <section id="skills"><SkillsSection></SkillsSection></section>
+        <section id="experience"><Education></Education></section>
+        <section id='about'><AboutMe></AboutMe></section>
+        <section id="contact"><Contact></Contact></section>
         <section id='footer'><Footer></Footer></section>
-      {/* </div> */}
     </>
   )
 }
