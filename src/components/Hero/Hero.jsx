@@ -158,6 +158,8 @@
 //   );
 // }
 
+
+
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import GitHubStats from "../Github/GitHubStats";
@@ -244,7 +246,7 @@ export default function Hero() {
             href={cv}
             download="Mehedi-Hasan_Shohan-CV.pdf"
             // target="_blank"
-            className="relative inline-flex ml-8 items-center gap-2 px-8 py-3 mt-4 rounded-lg border border-cyan-400 text-cyan-300 bg-cyan-500/5 font-bold overflow-hidden transition-all duration-300 hover:text-white group"
+            className="relative inline-flex ml-0 md:ml-8 items-center gap-2 px-8 py-3 mt-4 rounded-lg border border-cyan-400 text-cyan-300 bg-cyan-500/5 font-bold overflow-hidden transition-all duration-300 hover:text-white group"
           >
             {/* Glowing background on hover */}
             <span className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>

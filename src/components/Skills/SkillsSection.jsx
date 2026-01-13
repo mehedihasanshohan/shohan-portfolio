@@ -164,7 +164,7 @@ const toolSkills = [
       "GitHub Actions",
     ],
   },
-   {
+  {
     name: "Deployment",
     icon: SiVercel,
     color: "text-white",
@@ -186,14 +186,19 @@ const toolSkills = [
     name: "Chrome DevTools",
     icon: FaChrome,
     color: "text-blue-300",
-    topics: ["Performance Audit", "Network Debugging", "Lighthouse", "Memory Profiling"],
+    topics: [
+      "Performance Audit",
+      "Network Debugging",
+      "Lighthouse",
+      "Memory Profiling",
+    ],
   },
   {
     name: "Vite & NPM",
     icon: SiVite,
     color: "text-purple-400",
     topics: ["Fast HMR", "Package Management", "Build Optimization", "Scripts"],
-  }
+  },
 ];
 
 // softskills
@@ -239,8 +244,8 @@ const SkillCard = ({
 }) => (
   <div
     data-aos={animationData}
-    className="relative p-5 rounded-2xl md:p-8 bg-white/2
-              backdrop-blur-lg border border-white/20
+    className="relative p-6 rounded-2xl md:p-8 bg-white/2
+              backdrop-blur-md border border-white/20
               shadow-lg hover:shadow-xl transition-shadow
               duration-300 z-10"
   >
@@ -249,13 +254,15 @@ const SkillCard = ({
     >
       {title}
     </h2>
-    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6
-     relative z-10">
+    <ul
+      className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6
+     relative z-10"
+    >
       {/* section start */}
       {skills.map(({ name, icon: Icon, color, topics }) => (
-        <li
+        <div
           key={name}
-          className="group flex items-center gap-4 text-white
+          className="group flex items-center gap-3 sm:gap-4 text-white
                       cursor-pointer hover:text-cyan-300"
           onClick={() => onClickIcon({ name, Icon, color, topics })}
         >
@@ -266,7 +273,7 @@ const SkillCard = ({
               Click for more details
             </span>
           </div>
-        </li>
+        </div>
       ))}
       {/* section ends */}
     </ul>
@@ -277,13 +284,21 @@ const SkillsSection = () => {
   const [selectedSkill, setSelectedSkill] = useState(null);
 
   useEffect(() => {
-    Aos.init({ duration: 1000, easing: "ease-in-out", once: true });
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      // disable: "mobile",
+    });
   }, []);
 
   const closeModal = () => setSelectedSkill(null);
 
   return (
-    <section className="min-h-screen  bg-[#0f172a] px-4 py-16 flex items-center justify-center relative overflow-hidden">
+    <section
+      className="min-h-screen  bg-[#0f172a] px-4 py-16
+         flex items-center justify-center relative overflow-hidden"
+    >
       {/* Background floating icons */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         {[...Array(4)]
@@ -309,10 +324,10 @@ const SkillsSection = () => {
       </div>
 
       {/* Main content */}
-      <div className="grid md:grid-cols-2 gap-12 max-w-6xl w-full z-10 relative">
-        <div className="text-center text-3xl font-bold text-white mb-8 col-span-2">
-          <h1>My Skills</h1>
-        </div>
+      <div className="grid grid-cols-1  lg:grid-cols-2 gap-6 md:gap-10 max-w-6xl w-full z-10 relative">
+        <h1 className="text-center text-3xl font-bold text-white mb-8 lg:col-span-2">
+          My Skills
+        </h1>
 
         {/* frontend cards */}
         <SkillCard
@@ -354,8 +369,10 @@ const SkillsSection = () => {
       {/* Modal */}
       {selectedSkill && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center px-4">
-          <div className="bg-white/10 border border-white/20
-          rounded-2xl p-6 max-w-md w-full text-white relative shadow-xl backdrop-blur-lg">
+          <div
+            className="bg-white/10 border border-white/20
+          rounded-2xl p-6 max-w-md w-full text-white relative shadow-xl backdrop-blur-lg"
+          >
             <button
               onClick={closeModal}
               className="absolute top-2 right-3 text-white text-xl font-bold"
