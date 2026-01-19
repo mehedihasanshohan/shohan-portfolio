@@ -163,7 +163,7 @@
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import GitHubStats from "../Github/GitHubStats";
-import cv from "../../assets/2.pdf";
+// import cv from "../../assets/2.pdf";
 // import profileImg from "../../assets/profilephoto.png";
 import profileImgPng from "../../assets/profilephotopng3.png";
 
@@ -210,7 +210,7 @@ export default function Hero() {
           </p>
 
           <a
-            href={cv}
+            href="resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             // onClick={(e) => {
@@ -243,13 +243,18 @@ export default function Hero() {
           </a>
 
           <a
-            href={cv}
-            download="Mehedi-Hasan_Shohan-CV.pdf"
+            href="resume.pdf"
+            // download
+            download="Mehedi-Hasan_Shohan-Resume.pdf"
             // target="_blank"
-            className="relative inline-flex ml-0 md:ml-8 items-center gap-2 px-8 py-3 mt-4 rounded-lg border border-cyan-400 text-cyan-300 bg-cyan-500/5 font-bold overflow-hidden transition-all duration-300 hover:text-white group"
+            // rel="noopener noreferrer"
+            className="relative inline-flex ml-0 md:ml-8 items-center gap-2 px-8 py-3 mt-4
+            rounded-lg border border-cyan-400 text-cyan-300 bg-cyan-500/5 font-bold
+            overflow-hidden transition-all duration-300 hover:text-white group"
           >
             {/* Glowing background on hover */}
-            <span className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+            <span className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100
+            transition-all duration-500 pointer-events-none"></span>
 
             {/* Icon */}
             <svg
@@ -299,8 +304,10 @@ export default function Hero() {
             {/* Prevent background scroll */}
             <style>{`body { overflow: hidden; }`}</style>
 
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
-              <div className="glass w-full h-screen relative p-6 text-white">
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+              <div className="w-full h-screen relative p-6 text-white max-w-5xl
+              bg-white/10 border border-white/20 rounded-md
+              shadow-md backdrop-blur-lg animate-fade-in">
                 <button
                   onClick={() => setShowGitModal(false)}
                   className="absolute top-4 right-5 text-white text-2xl font-bold hover:text-cyan-400 transition"

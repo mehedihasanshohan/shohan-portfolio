@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router";
+import DecryptedText from '../DecryptedText';
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +42,18 @@ export default function Navbar() {
           className="text-2xl font-bold
            tracking-widest
             text-cyan-500">
-            Mehedi Hasan
+
+              {/*  */}
+              <DecryptedText
+          text="MEHEDI HASAN"
+          animateOn="view"
+          revealDirection="center"
+          speed={200}
+          className="revealed text-cyan-400"
+        />
+
+
+            {/* Mehedi Hasan */}
           </Link>
 
           {/* Desktop Menu */}

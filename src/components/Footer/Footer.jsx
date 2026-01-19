@@ -73,7 +73,7 @@ const downloadCard = async (e) => {
           <span className="text-cyan-400 font-semibold">
             Mehedi Hasan Shohan
             <br />
-            <p className="text-[10px] text-white">click to download photocard</p>
+            <p className="text-[10px] sm:mt-2 text-white">click to download photocard</p>
           </span>
         </div>
 
@@ -123,7 +123,7 @@ const downloadCard = async (e) => {
                 </div>
                 <div className="flex items-center gap-2">
                   <FiGlobe className="text-cyan-400" />
-                  http://portfolio-shohan.netlify.app
+                  http://portfolio-mhshohan23.netlify.app
                 </div>
                 <div className="flex items-center gap-2">
                   <FiPhone className="text-cyan-400"></FiPhone>

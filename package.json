@@ -19,7 +19,7 @@
     "html-to-image": "^1.11.13",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.507.0",
-    "motion": "^12.9.7",
+    "motion": "^12.26.1",
     "particles.js": "^2.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
