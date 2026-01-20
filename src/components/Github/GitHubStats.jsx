@@ -87,22 +87,19 @@ import GitHubCalendar from 'react-github-calendar';
 export default function GitHubStats() {
   return (
     <div className="w-full flex flex-col items-center gap-8 py-2">
-      {/* 1. Contribution Calendar - Data Firye Ana Hoyeche */}
       <div className="w-full bg-white/5 border border-white/20 p-4 md:p-8 rounded-2xl backdrop-blur-md">
-        <h2 className="text-xl font-bold mb-6 text-center text-cyan-300 uppercase tracking-widest">
+        <h2 className="text-xl font-bold mb-6 text-center text-cyan-500 uppercase tracking-widest">
           Contribution Graph
         </h2>
 
-        {/* Horizontal Scroll Wrapper - Jate data kete na jay */}
         <div className="w-full overflow-x-auto pb-4 custom-scrollbar">
           <div className="flex justify-center min-w-[750px] lg:min-w-full">
             <GitHubCalendar
               username="mehedihasanshohan"
               colorScheme="dark"
-              blockSize={15}
+              blockSize={10}
               blockMargin={5}
-              fontSize={14}
-              // Data jate load hoy tar jonno nicher props gulo thakbe
+              fontSize={13}
               hideColorLegend={false}
               showWeekdayLabels={true}
             />

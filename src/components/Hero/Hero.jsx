@@ -163,9 +163,7 @@
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import GitHubStats from "../Github/GitHubStats";
-// import cv from "../../assets/2.pdf";
-// import profileImg from "../../assets/profilephoto.png";
-import profileImgPng from "../../assets/profilephotopng3.png";
+import profileImgPng from "../../assets/mehedihasanshohan.png";
 
 
 export default function Hero() {
