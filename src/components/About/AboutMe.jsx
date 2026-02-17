@@ -1,12 +1,7 @@
 /* eslint-disable no-useless-escape */
 import { useState, useEffect } from "react";
-import {
-  FaBookOpen,
-  FaUsers,
-  FaTerminal,
-} from "react-icons/fa";
+import { FaBookOpen, FaUsers, FaTerminal } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
-
 
 const TerminalCode = () => {
   const [text, setText] = useState("");
@@ -83,16 +78,16 @@ export default developer;
 
 export default function AboutMe() {
   return (
-    <section className="py-24 bg-[#0f172a] text-white px-6 relative overflow-hidden">
+    <section className="py-24 bg-[#0f172a] text-white relative overflow-hidden">
       {/* Background Glows */}
       <div className="absolute top-1/3 -left-20 w-72 h-72 rounded-full blur-[120px]" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* LEFT: Polished Content */}
           <div className="lg:col-span-6 space-y-10" data-aos="fade-right">
             <div>
-              <h2 className="text-4xl mb-4 font-bold">
+              <h2 className="text-2xl mb-2 font-bold">
                 CRAFTING SCALABLE <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-500">
                   SOLUTIONS

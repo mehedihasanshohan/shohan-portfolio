@@ -12,15 +12,13 @@ import {
   ShieldCheck,
   Github,
 } from "lucide-react";
-import { Mail } from 'lucide-react';
+import { Mail } from "lucide-react";
 
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 
-
 export default function Contact() {
-
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     toast.success("Phone number copied!");
@@ -30,8 +28,6 @@ export default function Contact() {
     navigator.clipboard.writeText(text);
     toast.success("Email copied!");
   };
-
-
 
   const [form, setForm] = useState({
     name: "",
@@ -64,7 +60,7 @@ export default function Contact() {
         "service_zy92val",
         "template_sjqetck",
         templateParams,
-        "6zohXLugFlnauyF6x"
+        "6zohXLugFlnauyF6x",
       )
       .then(
         () => {
@@ -73,7 +69,7 @@ export default function Contact() {
         },
         () => {
           setStatus("Failed to send. Try again.");
-        }
+        },
       );
   };
 
@@ -85,15 +81,15 @@ export default function Contact() {
         data-aos="fade-right"
         data-aos-duration="1000"
       >
-        <h2 className="text-4xl font-bold ">Get In Touch</h2>
+        <h2 className="text-2xl font-semibold ">Get In Touch</h2>
         <div className="space-y-3">
           <p className="flex items-center gap-2">
             <Phone className="text-cyan-400" size={18} />
             <span className="">
-              <a href="tel:01985545365">01774767981</a>
+              <a href="tel:01774767981">01774767981</a>
             </span>
             <button
-              onClick={() => copyToClipboard("01985545365")}
+              onClick={() => copyToClipboard("01774767981")}
               className="text-cyan-300 hover:text-cyan-400"
               title="Copy phone number"
             >
@@ -102,11 +98,12 @@ export default function Contact() {
           </p>
           <p className="flex items-center gap-2">
             <MdEmail className="text-cyan-400" size={18} />
-            <span className="">
-              <a href="tel:01985545365">mhshohan01@gmail.com</a>
-            </span>
+            <a href="tel:+8801774767981">+8801774767981</a>
+
+            <a href="mailto:mhshohan04@gmail.com">mhshohan04@gmail.com</a>
+
             <button
-              onClick={() => emailCopyToClipboard("mhshohan01@gmail.com")}
+              onClick={() => emailCopyToClipboard("mhshohan04@gmail.com")}
               className="text-cyan-300 hover:text-cyan-400"
               title="Copy my email"
             >
@@ -115,9 +112,7 @@ export default function Contact() {
           </p>
           <p className="flex items-center opacity-80 gap-2">
             <IoLocationSharp className="text-cyan-400" size={18} />
-            <span className="">
-              Thana: Goalanda; District: Rajbari
-            </span>
+            <span className="">Thana: Goalanda; District: Rajbari</span>
           </p>
         </div>
 
@@ -179,7 +174,7 @@ export default function Contact() {
         data-aos="fade-left"
         data-aos-duration="1000"
       >
-        <h2 className="text-2xl font-bold mb-4">Send Message</h2>
+        <h2 className="text-2xl font-semibold mb-4">Send Message</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
             <User className="absolute left-3 top-3 text-cyan-500" size={20} />

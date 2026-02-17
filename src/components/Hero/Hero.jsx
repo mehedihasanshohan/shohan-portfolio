@@ -5,7 +5,6 @@
 // // import profileImg from "../../assets/profilephoto.png";
 // import profileImgPng from "../../assets/profilephotopng3.png";
 
-
 // export default function Hero() {
 //   const [showGitModal, setShowGitModal] = useState(false);
 
@@ -158,13 +157,10 @@
 //   );
 // }
 
-
-
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import GitHubStats from "../Github/GitHubStats";
 import profileImgPng from "../../assets/mehedihasanshohan.png";
-
 
 export default function Hero() {
   const [showGitModal, setShowGitModal] = useState(false);
@@ -200,15 +196,16 @@ export default function Hero() {
 
           <p className="text-white/80 text-lg max-w-xl mb-6">
             I build fast, scalable, and modern web applications using
-            <span className="text-cyan-300 font-medium"> <br />
+            <span className="text-cyan-300 font-medium">
               {" "}
-              React, Tailwind CSS
+              <br /> React, Tailwind CSS
             </span>
-            , and the <span className="text-cyan-300 font-medium">MERN Stack.</span>
+            , and the{" "}
+            <span className="text-cyan-300 font-medium">MERN Stack.</span>
           </p>
 
           <a
-            href="resume.pdf"
+            href="resume_Mehedi_Hasan_Frontend_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             // onClick={(e) => {
@@ -241,9 +238,9 @@ export default function Hero() {
           </a>
 
           <a
-            href="resume.pdf"
+            href="resume_Mehedi_Hasan_Frontend_Developer.pdf"
             // download
-            download="Mehedi-Hasan_Shohan-Resume.pdf"
+            download="resume_Mehedi_Hasan_Frontend_Developer.pdf"
             // target="_blank"
             // rel="noopener noreferrer"
             className="relative inline-flex ml-0 md:ml-8 items-center gap-2 px-8 py-3 mt-4
@@ -251,8 +248,10 @@ export default function Hero() {
             overflow-hidden transition-all duration-300 hover:text-white group"
           >
             {/* Glowing background on hover */}
-            <span className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100
-            transition-all duration-500 pointer-events-none"></span>
+            <span
+              className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100
+            transition-all duration-500 pointer-events-none"
+            ></span>
 
             {/* Icon */}
             <svg
@@ -285,13 +284,18 @@ export default function Hero() {
         </div>
 
         <div className="flex-1 flex justify-center" data-aos="fade-left">
-          <div className="relative group rounded-full overflow-hidden w-80 h-80 bg-white/10 border-4 border-gradient-to-r from-blue-600 via-purple-500 to-pink-500 backdrop-blur-md shadow-[0_0_30px_#00ffff33] hover:shadow-[0_0_60px_#00ffff88] transition duration-500 hover:scale-105 animate-float">
+          <div
+            className="relative group rounded-full overflow-hidden w-80 h-80 bg-white/10
+          border-4 border-gradient-to-r from-blue-600 via-purple-500
+           to-pink-500 backdrop-blur-md shadow-[0_0_30px_#00ffff33]
+           transition duration-500 hover:scale-105 animate-float"
+          >
             <img
               src={profileImgPng}
               alt="Mehedi"
-              className="w-full h-full object-contain transition duration-500 group-hover:scale-110"
+              className="w-full h-full object-contain scale-110 transition duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-cyan-400/10 opacity-0 transition duration-300 group-hover:opacity-80"></div>
+            <div className="absolute inset-0 bg-cyan-400/10 opacity-0 transition duration-300"></div>
           </div>
         </div>
         {/* right side ends */}
@@ -303,9 +307,11 @@ export default function Hero() {
             <style>{`body { overflow: hidden; }`}</style>
 
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
-              <div className="w-full h-screen relative p-6 text-white max-w-5xl
+              <div
+                className="w-full h-screen relative p-6 text-white max-w-5xl
               bg-white/10 border border-white/20 rounded-md
-              shadow-md backdrop-blur-lg animate-fade-in">
+              shadow-md backdrop-blur-lg animate-fade-in"
+              >
                 <button
                   onClick={() => setShowGitModal(false)}
                   className="absolute top-4 right-5 text-white text-2xl font-bold hover:text-cyan-400 transition"
