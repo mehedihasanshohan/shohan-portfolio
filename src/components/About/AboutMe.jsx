@@ -78,14 +78,14 @@ export default developer;
 
 export default function AboutMe() {
   return (
-    <section className="py-24 bg-[#0f172a] text-white relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-[#0f172a] text-white relative overflow-x-hidden">
       {/* Background Glows */}
       <div className="absolute top-1/3 -left-20 w-72 h-72 rounded-full blur-[120px]" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* LEFT: Polished Content */}
-          <div className="lg:col-span-6 space-y-10" data-aos="fade-right">
+          <div className="lg:col-span-6 space-y-8" data-aos="fade-right">
             <div>
               <h2 className="text-2xl mb-2 font-bold">
                 CRAFTING SCALABLE <br />
@@ -116,7 +116,7 @@ export default function AboutMe() {
             </div>
 
             {/* Hobby Section with better styling */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
               <div className="p-4 rounded-xl bg-white/2 border border-white/10 flex flex-col gap-3">
                 <FaBookOpen className="text-indigo-400 text-xl" />
                 <div>
@@ -148,7 +148,7 @@ export default function AboutMe() {
           </div>
 
           {/* RIGHT: TERMINAL */}
-          <div className="lg:col-span-6 lg:mt-6" data-aos="zoom-in">
+          <div className="lg:col-span-6 w-full lg:mt-6" data-aos="fade-left">
             <div className="relative group">
               <div className="absolute -inset-1 rounded-[2rem] blur opacity-15 group-hover:opacity-30 transition duration-1000"></div>
 
@@ -164,7 +164,7 @@ export default function AboutMe() {
                   </div>
                 </div>
 
-                <div className="p-10 min-h-[400px] bg-gradient-to-br from-indigo-500/[0.02] to-transparent backdrop-blur-3xl">
+                <div className="p-5 md:p-8 min-h-[300px] md:min-h-[400px] bg-gradient-to-br from-indigo-500/[0.02] to-transparent backdrop-blur-3xl">
                   <TerminalCode />
                 </div>
               </div>
