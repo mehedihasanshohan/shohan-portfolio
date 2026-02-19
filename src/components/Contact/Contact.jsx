@@ -125,7 +125,7 @@ export default function Contact() {
 
         {/* Bottom Section */}
         <div className="mt-10">
-          <h3 className="text-lg font-semibold mb-6">Let’s Connect</h3>
+          <h3 className="text-2xl font-semibold mb-3">Let’s Connect</h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <a
@@ -162,14 +162,15 @@ export default function Contact() {
               <span>GitHub</span>
             </a>
 
-            <a
-              href="mailto:mhshohan04@gmail.com"
-              className="flex items-center gap-3 px-4 py-2.5
- rounded-xl bg-[#1e293b] hover:bg-cyan-600/20 transition border border-white/10 hover:border-cyan-400"
+            <button
+              onClick={() => {
+                window.open("mailto:mhshohan04@gmail.com");
+              }}
+              className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-[#1e293b] hover:bg-cyan-600/20 transition border border-white/10 hover:border-cyan-400"
             >
               <Mail size={18} />
               <span>Email</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -180,7 +181,7 @@ export default function Contact() {
         data-aos="fade-left"
         data-aos-duration="1000"
       >
-        <h2 className="text-2xl font-semibold mb-4">Send Message</h2>
+        <h2 className="text-2xl font-semibold mb-3">Send Message</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
             <User className="absolute left-3 top-3 text-cyan-500" size={20} />

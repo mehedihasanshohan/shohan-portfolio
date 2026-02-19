@@ -606,7 +606,7 @@ export default function Education() {
                         className={`text-[11px] font-black uppercase tracking-[0.1em] transition-all duration-300 ${
                           edu.certificateImg
                             ? "text-white group-hover/btn:text-cyan-400 group-hover/btn:tracking-[0.2em] group-hover/btn:drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
-                            : "text-slate-500"
+                            : "text-slate-200"
                         }`}
                       >
                         {edu.result === "Dropout"

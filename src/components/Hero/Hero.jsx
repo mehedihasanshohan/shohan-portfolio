@@ -157,6 +157,8 @@
 //   );
 // }
 
+
+
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import GitHubStats from "../Github/GitHubStats";
@@ -169,13 +171,13 @@ export default function Hero() {
     setShowGitModal(true);
   };
   return (
-    <section className="min-h-screen w-full flex items-center justify-center bg-[#0f172a] px-6 md:px-16 text-white pt-24 md:pt-0">
+    <section className="min-h-screen w-full flex items-center justify-center bg-[#0f172a] px-6 md:px-16 text-white py-20 md:py-0">
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 w-full max-w-7xl">
         {/* Left Section */}
         <div className="flex-1" data-aos="fade-right">
           <h5 className="text-cyan-300 font-bold text-2xl">Hi, I'm</h5>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-            <span className="text-rose-400">Mehedi Hasan Shohan</span>
+            <span className="text-rose-400">Mehedi Hasan</span>
           </h1>
 
           <h2 className="text-2xl md:text-3xl mb-6 font-semibold text-cyan-300">
@@ -194,7 +196,8 @@ export default function Hero() {
             />
           </h2>
 
-          <p className="text-white/80 text-lg max-w-xl mb-6">
+          {/* <p className="text-white/80 text-lg max-w-xl mb-6"> */}
+          <p className="text-white/80 text-base md:text-lg max-w-xl mb-8 mx-auto md:mx-0">
             I build fast, scalable, and modern web applications using
             <span className="text-cyan-300 font-medium">
               {" "}
@@ -243,7 +246,7 @@ export default function Hero() {
             download="resume_Mehedi_Hasan_Frontend_Developer.pdf"
             // target="_blank"
             // rel="noopener noreferrer"
-            className="relative inline-flex ml-0 md:ml-8 items-center gap-2 px-8 py-3 mt-4
+            className="relative inline-flex ml-4 md:ml-8 items-center gap-2 px-8 py-3 mt-4
             rounded-lg border border-cyan-400 text-cyan-300 bg-cyan-500/5 font-bold
             overflow-hidden transition-all duration-300 hover:text-white group"
           >
