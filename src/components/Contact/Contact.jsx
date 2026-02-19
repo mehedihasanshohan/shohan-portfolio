@@ -74,103 +74,110 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 bg-[#0f172a] text-white px-6 grid lg:grid-cols-2 gap-6">
+    <section className="py-12 lg:py-20 bg-[#0f172a] text-white px-4 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
       {/* Left Side */}
-      <div
-        className="space-y-6 rounded-xl p-6 bg-white/2 relative z-20 border border-white/20"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-      >
-        <h2 className="text-2xl font-semibold ">Get In Touch</h2>
-        <div className="space-y-3">
-          <p className="flex items-center gap-2">
-            <Phone className="text-cyan-400" size={18} />
-            <span className="">
-              <a href="tel:01774767981">01774767981</a>
-            </span>
-            <button
-              onClick={() => copyToClipboard("01774767981")}
-              className="text-cyan-300 hover:text-cyan-400"
-              title="Copy phone number"
-            >
-              <Copy size={16} />
-            </button>
-          </p>
-          <p className="flex items-center gap-2">
-            <MdEmail className="text-cyan-400" size={18} />
-            <a href="tel:+8801774767981">+8801774767981</a>
+     <div
+  className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/20 flex flex-col justify-between"
+  data-aos="fade-right"
+  data-aos-duration="1000"
+>
+  {/* Top Section */}
+  <div>
+    <h2 className="text-2xl font-semibold mb-3">Get In Touch</h2>
 
-            <a href="mailto:mhshohan04@gmail.com">mhshohan04@gmail.com</a>
 
-            <button
-              onClick={() => emailCopyToClipboard("mhshohan04@gmail.com")}
-              className="text-cyan-300 hover:text-cyan-400"
-              title="Copy my email"
-            >
-              <Copy size={16} />
-            </button>
-          </p>
-          <p className="flex items-center opacity-80 gap-2">
-            <IoLocationSharp className="text-cyan-400" size={18} />
-            <span className="">Thana: Goalanda; District: Rajbari</span>
-          </p>
+    {/* Contact Info Cards */}
+    <div className="space-y-4">
+      {/* Phone */}
+      <div className="flex items-center justify-between bg-[#1e293b] p-4 rounded-xl border border-white/10">
+        <div className="flex items-center gap-3">
+          <Phone className="text-cyan-400" size={20} />
+          <span>01774767981</span>
         </div>
-
-        <div className="mt-4">
-          <iframe
-            title="Google Map"
-            className="w-full h-48 rounded-xl border border-cyan-400"
-            src="https://www.google.com/maps?q=Goalanda,Rajbari&output=embed"
-            allowFullScreen
-            loading="lazy"
-          ></iframe>
-        </div>
-
-        <div className="border p-2 rounded-xl">
-          <div className="font-bold text-xl">Follow Me</div>
-          <div className="flex gap-4 mt-4 text-xl">
-            <a
-              href="https://www.facebook.com/profile.php?id=100007820023284"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-cyan-400"
-            >
-              <Facebook />
-            </a>
-
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=mhshohan01@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-cyan-400"
-            >
-              <Mail />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/mehedi-hasan-1a08b22b7/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-cyan-400"
-            >
-              <Linkedin />
-            </a>
-
-            <a
-              href="https://github.com/mehedihasanshohan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-cyan-400"
-            >
-              <Github />
-            </a>
-          </div>
-        </div>
+        <button
+          onClick={() => copyToClipboard("01774767981")}
+          className="hover:text-cyan-400"
+        >
+          <Copy size={16} />
+        </button>
       </div>
+
+      {/* Email */}
+      <div className="flex items-center justify-between bg-[#1e293b] p-4 rounded-xl border border-white/10">
+        <div className="flex items-center gap-3">
+          <Mail className="text-cyan-400" size={20} />
+          <span>mhshohan04@gmail.com</span>
+        </div>
+        <button
+          onClick={() => emailCopyToClipboard("mhshohan04@gmail.com")}
+          className="hover:text-cyan-400"
+        >
+          <Copy size={16} />
+        </button>
+      </div>
+
+      {/* Location */}
+      <div className="flex items-center gap-3 bg-[#1e293b] p-4 rounded-xl border border-white/10">
+        <IoLocationSharp className="text-cyan-400" size={20} />
+        <span>Goalanda, Rajbari</span>
+      </div>
+    </div>
+  </div>
+
+  {/* Bottom Section */}
+  <div className="mt-10">
+    <h3 className="text-lg font-semibold mb-6">Let’s Connect</h3>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a
+        href="https://www.facebook.com/profile.php?id=100007820023284"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-3 px-4 py-2.5
+ rounded-xl bg-[#1e293b] hover:bg-cyan-600/20 transition border border-white/10 hover:border-cyan-400"
+      >
+        <Facebook size={18} />
+        <span>Facebook</span>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/mehedi-hasan-1a08b22b7/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-3 px-4 py-2.5
+ rounded-xl bg-[#1e293b] hover:bg-cyan-600/20 transition border border-white/10 hover:border-cyan-400"
+      >
+        <Linkedin size={18} />
+        <span>LinkedIn</span>
+      </a>
+
+      <a
+        href="https://github.com/mehedihasanshohan"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-3 px-4 py-2.5
+ rounded-xl bg-[#1e293b] hover:bg-cyan-600/20 transition border border-white/10 hover:border-cyan-400"
+      >
+        <Github size={18} />
+        <span>GitHub</span>
+      </a>
+
+      <a
+        href="mailto:mhshohan04@gmail.com"
+        className="flex items-center gap-3 px-4 py-2.5
+ rounded-xl bg-[#1e293b] hover:bg-cyan-600/20 transition border border-white/10 hover:border-cyan-400"
+      >
+        <Mail size={18} />
+        <span>Email</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 
       {/* Right Side Form */}
       <div
-        className="bg-white/2 rounded-xl p-6 shadow-xl relative z-10 border border-white/20"
+        className="bg-white/2 rounded-xl p-6 md:p-8 shadow-xl relative z-10 border border-white/20"
         data-aos="fade-left"
         data-aos-duration="1000"
       >

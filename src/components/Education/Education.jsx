@@ -344,7 +344,6 @@ import {
   FaDownload,
 } from "react-icons/fa";
 
-// 1. Data Update: certificate property e image path boshan
 const educationData = [
   {
     id: 1,
@@ -383,7 +382,6 @@ const educationData = [
     year: "2025",
     icon: <FaLaptopCode />,
     category: "tech",
-    // Apnar image file path niche din (Public folder e rakhun file ti)
     certificateImg: "/phcertificate.PNG",
     points: [
       "Full-stack development with MERN (MongoDB, Express, React, Node.js)",
